@@ -51,7 +51,7 @@ Each topic will include **theory notes**, **Jupyter notebooks**, and/or **Stream
 - [Frequency encoding](#)  
 - [CatBoost encoding](#)  
 - [Embeddings](#)  
-- [Cyclical encoding (time features)](#)  
+- [Cyclical encoding (time features)](https://github.com/Gurubux/interview-prep-ml-ai/blob/main/05_Feature_Engineering/notebooks/Encoding/feature_encoding_cyclic_notebook.ipynb)  
 
 ---
 
