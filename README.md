@@ -4,6 +4,8 @@ This repository contains my structured preparation for interviews as a **Lead Da
 
 Each section contains **theory notes (README.md)**, **Jupyter notebooks**, and **demos (Streamlit where possible)**.  
 
+📑 My detailed preparation plan is available here: [Google Sheet Plan Guide](https://docs.google.com/spreadsheets/d/1TdGqA2QfkTr8HyQlPvBa7yCKXL2ZEALPlrjp7q10Ygc/edit?gid=0#gid=0)  
+
 ---
 
 ## 📂 Index  
