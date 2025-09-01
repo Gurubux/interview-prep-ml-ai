@@ -60,7 +60,7 @@ Each subtopic will include **theory notes**, **hands-on notebooks**, and/or **de
 ---
 
 ### 4. DevOps Core  
-- [Git](https://github.com/Gurubux/interview-prep-ml-ai/tree/main/01_Coding)  
+- [Git](https://github.com/Gurubux/interview-prep-ml-ai/blob/main/13_Cloud_DevOps/notebooks/Git/README.md)  
 - [CI/CD (GitHub Actions, GitLab CI, Jenkins)](#)  
 - [Docker](#)  
 - [Kubernetes](#)  
