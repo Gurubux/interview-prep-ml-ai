@@ -109,7 +109,7 @@ $$
 ## 4) Update rule (the learning step)
 
 $$
-\boxed{\,w \leftarrow w - \text{lr}\cdot \nabla_w L = w - \text{lr}\cdot \frac{2}{n}\,X_b^\top e\,}
+\boxed{w \leftarrow w - \text{lr}\cdot \nabla_w L = w - \text{lr}\cdot \frac{2}{n}X_b^\top e}
 $$
 
 Where **lr** is the learning rate (step size).
