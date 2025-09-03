@@ -8,7 +8,7 @@ Each topic will include **theory notes**, **Jupyter notebooks**, and/or **Stream
 ## 📂 Index  
 
 ### 1. Regression  
-- [Linear Regression](#)  
+- [Linear Regression⏳](https://github.com/Gurubux/interview-prep-ml-ai/tree/main/07_ML_Algorithms/notebooks/07_1_Linear_Regression)  
   - Assumptions: linearity, homoscedasticity, normal residuals, independence  
 - [Regularized Regression](#)  
   - Ridge, Lasso, ElasticNet  
