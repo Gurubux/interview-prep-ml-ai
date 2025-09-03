@@ -83,9 +83,9 @@ $$
 \frac{\partial L}{\partial C} \\
 \frac{\partial L}{\partial M}
 \end{bmatrix}
-\\[6pt]
+\
 &= \frac{2}{n}\,X_b^{\top} e
-\\[6pt]
+\
 &= \frac{2}{n}
 \begin{bmatrix}
 \sum_{i=1}^n e_i \\
