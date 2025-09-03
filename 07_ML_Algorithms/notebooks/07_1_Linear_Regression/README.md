@@ -1,4 +1,4 @@
-# Linear Regression — Algorithm README (your mental model)
+# Linear Regression — Algorithm README
 
 ![Dashboard demo](https://github.com/Gurubux/interview-prep-ml-ai/blob/main/07_ML_Algorithms/notebooks/07_1_Linear_Regression/media/streamlit-07_1_Linear_regression_3_streamlit-2025-09-03-03-09-02.gif)
 
@@ -213,8 +213,7 @@ Gradient descent approaches this solution as steps increase (with a sensible `lr
 
 ---
 
-**You nailed the mental model.**
-I’ll keep explanations anchored to:
+**My Mental model.**
 $X_b = \[1, x]$,   
 w = \[C, M],   
 ŷ = C + Mx,   
