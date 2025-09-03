@@ -14,7 +14,12 @@ We fit a straight line **y ≈ C + M·x** to data points $(x_i, y_i)$ by **nudgi
 
 ## 1) Notation & shapes (keep this picture in mind)
 
-* **Design matrix:** $$X_b = \begin{bmatrix} 1 & x_1 \\ 1 & x_2 \\ \vdots & \vdots \\ 1 & x_n \end{bmatrix}$$
+* **Design matrix:** 
+
+$$
+X_b = \begin{bmatrix} 1 & x_1 \\ 1 & x_2 \\ \vdots & \vdots \\ 1 & x_n \end{bmatrix}
+$$
+
   shape: $(n \times 2)$
 * **Parameters:** $w = \begin{bmatrix} C \\ M \end{bmatrix}$
   shape: $(2 \times 1)$
