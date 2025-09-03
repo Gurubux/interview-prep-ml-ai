@@ -79,16 +79,16 @@ $$
 \nabla_w L
 =
 \begin{bmatrix}
-\partial L/\partial C\\
-\partial L/\partial M
+\displaystyle \frac{\partial L}{\partial C} \\
+\displaystyle \frac{\partial L}{\partial M}
 \end{bmatrix}
 =
-\frac{2}{n}\,X_b^\top e
+\frac{2}{n}\,X_b^{\top} e
 =
 \frac{2}{n}
 \begin{bmatrix}
-\sum e_i\\
-\sum x_i e_i
+\displaystyle \sum_{i=1}^n e_i \\
+\displaystyle \sum_{i=1}^n x_i e_i
 \end{bmatrix}.
 $$
 
