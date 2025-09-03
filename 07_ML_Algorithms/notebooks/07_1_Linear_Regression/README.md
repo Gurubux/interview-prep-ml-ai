@@ -18,23 +18,25 @@ We fit a straight line **y ≈ C + M·x** to data points $(x_i, y_i)$ by **nudgi
 
 $$
 X_b = \begin{bmatrix} 1 & x_1 \\ 1 & x_2 \\ \vdots & \vdots \\ 1 & x_n \end{bmatrix}
+shape: $(n \times 2)$
 $$
 
-  shape: $(n \times 2)$
+
 * **Parameters:**   
 
 $$
 w = \begin{bmatrix} C \\ M \end{bmatrix}
+shape: $(2 \times 1)$
 $$
-
-  shape: $(2 \times 1)$
+  
 * **Predictions:**
 $$
-\hat y = X_b\,w$  (vector, shape $(n \times 1)$)
+\hat y = X_b\,w  (vector, shape $(n \times 1)$)
+$$
 * **Residuals (errors):**
 $$
-e = \hat y - y$ (shape $(n \times 1)$)
-
+e = \hat y - y (shape $(n \times 1)$)
+$$
 Python equivalence:
 
 * `Xb = np.c_[np.ones(n), x]`
