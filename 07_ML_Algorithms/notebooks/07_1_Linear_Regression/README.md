@@ -30,13 +30,17 @@ shape: $(2 \times 1)$
 $$
   
 * **Predictions:**
+
 $$
 \hat y = X_b\,w  (vector, shape $(n \times 1)$)
 $$
+
 * **Residuals (errors):**
+
 $$
 e = \hat y - y (shape $(n \times 1)$)
 $$
+
 Python equivalence:
 
 * `Xb = np.c_[np.ones(n), x]`
