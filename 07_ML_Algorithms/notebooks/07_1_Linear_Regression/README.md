@@ -57,8 +57,8 @@ Python equivalence:
 
 $$
 L(C,M) = \frac{1}{n}\sum_{i=1}^n (\hat y_i - y_i)^2
-= \frac{1}{n}\, ||e||_2^2
-= \frac{1}{n}\, e^\top e
+= \frac{1}{n} |e|_2^2
+= \frac{1}{n} e^\top e
 $$
 
 (We use the **square** because it’s smooth and easy to differentiate; $\|e\|_2^2 = e^\top e$ for real vectors.)
