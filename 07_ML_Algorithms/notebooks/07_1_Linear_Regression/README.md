@@ -207,12 +207,11 @@ Gradient descent approaches this solution as steps increase (with a sensible `lr
 
 **You nailed the mental model.**
 I’ll keep explanations anchored to:  
-**
-“Xb = \[1, x], 
-w = \[C, M], 
-ŷ = C + Mx, 
-e = ŷ − y, 
-Loss = mean(e²), 
-grad = (2/n)Xbᵀe, 
-update w ← w − lr·grad.
+**“Xb = \[1, x],   
+w = \[C, M],   
+ŷ = C + Mx,   
+e = ŷ − y,   
+Loss = mean(e²),   
+grad = (2/n)Xbᵀe,   
+update w ← w − lr·grad.  
 ”**
