@@ -76,21 +76,24 @@ $$
 ### Packed vector (both at once)
 
 $$
+\begin{aligned}
 \nabla_w L
-=
+&=
 \begin{bmatrix}
-\displaystyle \frac{\partial L}{\partial C} \\
-\displaystyle \frac{\partial L}{\partial M}
+\frac{\partial L}{\partial C} \\
+\frac{\partial L}{\partial M}
 \end{bmatrix}
-=
-\frac{2}{n}\,X_b^{\top} e
-=
-\frac{2}{n}
+\\[6pt]
+&= \frac{2}{n}\,X_b^{\top} e
+\\[6pt]
+&= \frac{2}{n}
 \begin{bmatrix}
-\displaystyle \sum_{i=1}^n e_i \\
-\displaystyle \sum_{i=1}^n x_i e_i
+\sum_{i=1}^n e_i \\
+\sum_{i=1}^n x_i e_i
 \end{bmatrix}.
+\end{aligned}
 $$
+
 
 **Intuition:**
 
