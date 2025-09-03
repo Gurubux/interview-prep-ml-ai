@@ -23,7 +23,9 @@ $$
   shape: $(n \times 2)$
 * **Parameters:**   
 
-$w = \begin{bmatrix} C \\ M \end{bmatrix}$
+$$
+w = \begin{bmatrix} C \\ M \end{bmatrix}
+$$
 
   shape: $(2 \times 1)$
 * **Predictions:** $\hat y = X_b\,w$  (vector, shape $(n \times 1)$)
