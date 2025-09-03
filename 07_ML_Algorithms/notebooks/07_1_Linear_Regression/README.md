@@ -207,7 +207,8 @@ Gradient descent approaches this solution as steps increase (with a sensible `lr
 
 **You nailed the mental model.**
 I’ll keep explanations anchored to:  
-**“$X_b = \[1, x]$,   
+**
+$X_b = \[1, x]$,   
 w = \[C, M],   
 ŷ = C + Mx,   
 e = ŷ − y,   
