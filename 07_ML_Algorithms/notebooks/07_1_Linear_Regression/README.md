@@ -2,6 +2,7 @@
 
 ![Dashboard demo](https://github.com/Gurubux/interview-prep-ml-ai/blob/main/07_ML_Algorithms/notebooks/07_1_Linear_Regression/media/streamlit-07_1_Linear_regression_3_streamlit-2025-09-03-03-09-02.gif)
 
+Code snippet: [Python Code](https://github.com/Gurubux/interview-prep-ml-ai/blob/main/07_ML_Algorithms/notebooks/07_1_Linear_Regression/07_1_Linear_regression_3_streamlit.py)
 > **Crux (one line):**  
 > **Xb = \[1, x], w = \[C, M], ŷ = Xb @ w = C + Mx, e = ŷ − y,  
 > Loss = mean(e²), grad = (2/n)·Xbᵀ·e, update: w ← w − lr·grad.**  
