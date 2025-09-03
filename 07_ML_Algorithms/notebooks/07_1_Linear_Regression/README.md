@@ -212,6 +212,6 @@ w = \[C, M],
 ŷ = C + Mx,   
 e = ŷ − y,   
 Loss = mean(e²),   
-grad = $(2/n)X_b^\top e$,   
+grad = $\tfrac{1}{n}X_b^\top e$,   
 update w ← w − lr·grad.  
 
