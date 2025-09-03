@@ -43,7 +43,7 @@ $$
 e = \hat y - y 
 $$
 
-(shape $(n \times 1)$)
+$(shape (n \times 1))$
 
 Python equivalence:
 
@@ -57,8 +57,8 @@ Python equivalence:
 
 $$
 L(C,M) = \frac{1}{n}\sum_{i=1}^n (\hat y_i - y_i)^2
-\;=\; \frac{1}{n}\, \|e\|_2^2
-\;=\; \frac{1}{n}\, e^\top e
+= \frac{1}{n}\, \|e\|_2^2
+= \frac{1}{n}\, e^\top e
 $$
 
 (We use the **square** because it’s smooth and easy to differentiate; $\|e\|_2^2 = e^\top e$ for real vectors.)
@@ -109,7 +109,7 @@ $$
 ## 4) Update rule (the learning step)
 
 $$
-\boxed{\,w \leftarrow w - \text{lr}\cdot \nabla_w L \;=\; w - \text{lr}\cdot \frac{2}{n}\,X_b^\top e\,}
+\boxed{\,w \leftarrow w - \text{lr}\cdot \nabla_w L = w - \text{lr}\cdot \frac{2}{n}\,X_b^\top e\,}
 $$
 
 Where **lr** is the learning rate (step size).
