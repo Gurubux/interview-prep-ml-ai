@@ -151,7 +151,7 @@ repeat steps:
 
 ## 6) Micro derivation (chain rule, one line each)
 
-Let $h(w)=X_b w - y$, $g(u)=\tfrac{1}{n}u^\top u$.
+Let $h(w)=X_b w - y$, $g(u)=\tfrac{1}{n}u^\top u$.  
 Then $L(w)=g(h(w))$, $\nabla_u g = \tfrac{2}{n}u$, $\partial h/\partial w = X_b$.
 
 $$
