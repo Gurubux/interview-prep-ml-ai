@@ -27,12 +27,14 @@ $$
 $$
 w = \begin{bmatrix} C \\ M \end{bmatrix}
 $$
+
 shape: $(2 \times 1)$
 * **Predictions:**
 
 $$
 \hat y = X_b\,w  
 $$
+
 (vector, shape $(n \times 1)$)
 
 * **Residuals (errors):**
@@ -40,6 +42,7 @@ $$
 $$
 e = \hat y - y 
 $$
+
 (shape $(n \times 1)$)
 
 Python equivalence:
