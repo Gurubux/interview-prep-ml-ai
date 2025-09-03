@@ -206,8 +206,7 @@ Gradient descent approaches this solution as steps increase (with a sensible `lr
 ---
 
 **You nailed the mental model.**
-I’ll keep explanations anchored to:  
-**
+I’ll keep explanations anchored to:
 $X_b = \[1, x]$,   
 w = \[C, M],   
 ŷ = C + Mx,   
@@ -215,4 +214,4 @@ e = ŷ − y,
 Loss = mean(e²),   
 grad = $(2/n)X_b^\top e$,   
 update w ← w − lr·grad.  
-”**
+
