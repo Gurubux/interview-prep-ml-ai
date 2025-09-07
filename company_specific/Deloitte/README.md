@@ -242,55 +242,55 @@ model.train(transaction_sequences, labels)
 ### **2.4.3. 10 Interview Questions & Answers (Audit/Assurance Focus)**  
 
 #### **Q1. Explain Neural Networks in simple terms.**  
-
+  
 **A:** A neural network is a system of connected “neurons” that learn patterns from data. Unlike traditional ML, it can capture complex, non-linear relationships — e.g., unusual financial entries indicating fraud.
 
 ---
 
 #### **Q2. Why use Deep Learning in Audit when simpler ML works?**  
-
+  
 **A:** Traditional ML works for small, structured problems. Deep Learning is needed when patterns are complex, like unstructured invoice text, audio records, or millions of ledger entries with hidden anomalies.
 
 ---
 
 #### **Q3. What is a CNN and how could it help in Deloitte’s Assurance services?**  
-
+  
 **A:** CNNs analyze visual data. In audit, they can check scanned receipts, detect forged documents, or identify inconsistencies in handwritten signatures.
 
 ---
 
 #### **Q4. What is an RNN and its role in audit analytics?**  
-
+  
 **A:** RNNs learn from sequences. In audit, they can detect suspicious sequences of transactions over time (e.g., month-end revenue spikes that don’t align with business operations).
 
 ---
 
 #### **Q5. How would you explain “overfitting” to a client?**  
-
+  
 **A:** Overfitting means the model memorizes training data instead of learning general rules. In audit, that would mean flagging only past fraud cases, but missing new patterns.
 
 ---
 
 #### **Q6. How can Deep Learning improve regulatory compliance checks?**  
-
+  
 **A:** By automatically scanning large volumes of contracts, policies, or transactions for non-compliance, deep learning reduces manual review time while increasing accuracy.
 
 ---
 
 #### **Q7. Give an example where Deloitte could use CNNs in Audit.**  
-
+  
 **A:** Deloitte could use CNNs to scan thousands of invoices for signs of tampering, such as font inconsistencies, modified numbers, or forged seals.
 
 ---
 
 #### **Q8. How can RNNs help with fraud detection in banking audits?**  
-
+  
 **A:** RNNs can model the sequence of customer transactions, detecting suspicious behavior patterns (e.g., sudden cash withdrawals followed by transfers to multiple accounts).
 
 ---
 
 #### **Q9. What challenges do you see in applying Deep Learning in Assurance?**  
-
+  
 **A:**  
 
 1. Data availability (labeled fraud data is rare).
@@ -301,7 +301,7 @@ model.train(transaction_sequences, labels)
 ---
 
 #### **Q10. How would you explain Deep Learning value to a non-technical client?**  
-
+  
 **A:** “Deep Learning is like giving the computer an experienced auditor’s brain — it learns patterns from millions of records to highlight risks that humans may overlook, faster and at scale.”
 
 ---
@@ -626,12 +626,11 @@ $$
 
 #### ✅ Deloitte Audit Example Connections
 
-* **Norms** → required for cosine similarity in document comparison.
-* **Cosine similarity** → measure closeness of two audit reports.
-* **Euclidean/Manhattan** → compare embedding distances (e.g., fraud vs error).
-* **Jaccard** → compare clause overlap between contracts.
-* **TF-IDF** → flag unusual terms in financial reports.
-* 
+* **Norms** → Required for cosine similarity in document comparison.
+* **Cosine similarity** → Measure closeness of two audit reports.
+* **Euclidean/Manhattan** → Compare embedding distances (e.g., fraud vs error).
+* **Jaccard** → Compare clause overlap between contracts.
+* **TF-IDF** → Flag unusual terms in financial reports.
 ---
 
 ## 2.6 Experience developing Generative AI projects.
@@ -642,6 +641,35 @@ $$
 	- test-driven development, 
 	- smart data structure
 	- algorithm selection.
+
+Think of building a **treehouse**:
+
+* If you build the whole treehouse first and then check if it’s safe, you might find it falls down. Too late!
+* But if before hammering each piece, you **test** it (like “Is this wood strong enough? Does this nail hold?”), then you’re safe step by step.
+
+That’s what **software engineering best practices** are about:
+
+* **Test-Driven Development (TDD):** Write a “test” (like a safety checklist) *before* writing the actual code. You only write enough code to pass the test.
+* **Version Control (like Git):** Like saving copies of your treehouse at each stage so you can go back if something breaks.
+* **Code Reviews:** Like having a friend double-check your measurements before you cut the wood.
+* **Continuous Integration (CI):** Every time you add a plank, you check the whole treehouse still holds together.
+
+---
+
+### 🧑‍💼 Interview-Friendly Version
+
+Exercising **software engineering best practices** means applying disciplined approaches that improve code quality, reliability, and maintainability.
+
+Examples:
+
+* **Test-Driven Development (TDD):** Write automated tests before writing code, ensuring functionality is correct and preventing regressions.
+* **Version Control (e.g., Git):** Track changes, enable collaboration, and roll back if needed.
+* **Code Reviews & Pair Programming:** Improve quality and share knowledge.
+* **Continuous Integration/Deployment (CI/CD):** Regularly integrate code and deploy in small increments to reduce risk.
+* **Clean Code Principles:** Writing simple, readable, and maintainable code.
+
+✅ Quick interview answer:
+“Exercising software engineering best practices means following structured methods like test-driven development, version control, code reviews, and continuous integration. These practices ensure the software is reliable, easy to maintain, and can be built iteratively without introducing unnecessary risks.”
 
 ---
 
@@ -666,6 +694,43 @@ $$
 ---
 
 ## 2.13 Agile development team.
+
+Imagine you and your friends want to build a LEGO city.
+
+* Instead of one person doing everything, everyone has a role:
+
+  * Someone finds the right LEGO pieces (like a **developer**).
+  * Someone checks if the buildings are strong enough (like a **tester/QA**).
+  * Someone makes sure you’re building what the city actually needs (like a **product owner**).
+  * Someone keeps the team on track and removes obstacles (like a **scrum master**).
+
+* You don’t build the whole city in one go. Instead, you:
+
+  1. Plan a **small part** (e.g., just a house).
+  2. Build it in a **short time** (a few days or weeks = **sprint**).
+  3. Show it, get **feedback**, fix things, then move on to the next part.
+
+This way, the LEGO city grows step by step, everyone works together, and the city matches what people actually want.
+
+---
+
+### 🧑‍💼 Interview-friendly version
+
+An **Agile development team** is a small, cross-functional group (developers, testers, product owner, scrum master, etc.) that works collaboratively to deliver software in short, iterative cycles called **sprints**.
+
+Key points:
+
+* **Self-organizing**: Team decides how best to do the work.
+* **Cross-functional**: Skills from different areas are present in the team.
+* **Iterative delivery**: Work is done in small increments (2–4 weeks).
+* **Feedback loop**: Regular reviews/retrospectives ensure constant improvement.
+* **Customer focus**: Always delivering value to the end user.
+
+---
+
+✅ So if the interviewer asks *“What is an Agile development team?”*, you can say:
+
+“An Agile development team is a small, cross-functional, and self-organizing group that works in short cycles to deliver working software. The team collaborates closely, gets frequent feedback, and continuously improves, ensuring that the product evolves in line with customer needs.”
 
 ---
 
@@ -840,12 +905,93 @@ Acronyms / Frameworks That Apply:
 ### From the book Notes
 
 # 6. BUSINESS CASE STUDY QUESTIONS
-### Preparation
+
+**1. Q:** A client’s financial data has missing values. How would you handle it?  
+**A:** First, check why values are missing. If small, I’d fill using averages/medians. If big, I’d use ML models to estimate. Always document the approach for audit transparency.
+
+**2. Q:** How do you explain “machine learning” to a non-technical auditor?  
+**A:** It’s like teaching Excel to spot patterns automatically instead of us writing formulas. The computer “learns” rules from past data and applies them to new data.
+
+**3. Q:** A client wants AI but fears compliance issues. What’s your response?  
+**A:** I’d stress that AI must follow data protection laws (like GDPR). We anonymize personal data, keep audit trails, and ensure results are explainable for regulators.
+
+**4. Q:** How would you check for fraud in expense claims using ML?  
+**A:** I’d build a model to flag unusual claims (too big, odd timing, or outside norms). Then auditors can review the flagged items for possible fraud.
+
+**5. Q:** What’s the value of “assurance” in data science?  
+**A:** It builds trust. We show that data is handled correctly, models are reliable, and reporting is transparent – helping clients and regulators believe the results.
+
+**6. Q:** How do you ensure audit models are unbiased?  
+**A:** Use diverse data, test for fairness (e.g., group comparisons), and avoid using sensitive fields like gender unless legally required.
+
+**7. Q:** Why use Python in audit analytics?  
+**A:** Python is flexible. It handles big data, has powerful libraries (pandas, scikit-learn), and integrates with audit dashboards like Tableau or Power BI.
+
+**8. Q:** A junior analyst made a complex model. How do you review it?  
+**A:** I’d check clarity of code, correct logic, proper documentation, and whether the model is explainable. Simpler and transparent beats complex and black-box in audit.
+
+**9. Q:** What is “transparent reporting” in ML context?  
+**A:** It means not hiding behind jargon – we show how data was used, what model did, and why the result came out, so anyone (auditor/regulator) can follow.
+
+**10. Q:** A client asks: “Why not just use Excel instead of ML?”  
+**A:** Excel is great for small, simple tasks. But ML handles millions of rows, finds hidden patterns, and predicts future risks – far beyond Excel’s limits.
+
+**11. Q:** How do you explain “risk appetite” in business terms?  
+**A:** It’s like a safety net. A company accepts some level of risk (like small fraud cases) but not too much. We align data checks with that level.
+
+**12. Q:** If your ML model gives 90% accuracy, is it always good?  
+**A:** Not always. If 90% comes from ignoring minority cases, it’s misleading. In audit, we care more about catching risky outliers than just high accuracy.
+
+**13. Q:** What role does cloud (Azure/AWS) play in audit analytics?  
+**A:** It gives scale and speed. Instead of laptops, we use cloud to process huge client datasets securely, with built-in compliance controls.
+
+**14. Q:** What is the role of DevOps in ML for audit?  
+**A:** DevOps ensures models are tested, version-controlled, and deployed smoothly. It makes analytics repeatable, traceable, and trusted – critical in audit.
+
+**15. Q:** How do you explain LLMs/Generative AI in simple terms?  
+**A:** It’s like a very advanced autocomplete. It reads huge amounts of text, learns patterns, and then generates answers or summaries in plain language.
+
+**16. Q:** How would you use NLP in an audit?  
+**A:** We can scan thousands of contracts, emails, or reports to flag unusual terms, compliance issues, or risks – much faster than manual review.
+
+**17. Q:** What’s the biggest risk of AI in audit?  
+**A:** Over-reliance. If auditors trust AI blindly, errors may go unnoticed. That’s why explainability and human judgment remain key.
+
+**18. Q:** How do you present complex ML results to senior auditors?  
+**A:** Use visuals (dashboards, simple charts) and business impact terms (savings, risk reduced), not technical jargon. Always link back to audit objectives.
+
+---
+
+# 7. QUESTIONS TO ASK THE INTERVIEWER
+
+### **7.1 Role-Specific Questions**
+
+✅ *Show you understand the day-to-day, tools, and expectations*
+
+1. **“In Audit & Assurance projects, how does the data science team typically balance technical depth—like developing ML models in Python, R, or Azure ML—with the need to communicate insights clearly to auditors, regulators, and non-technical stakeholders?”**
+   *(Shows you understand the dual challenge of technical rigor + business communication.)*
+
+2. **“For a Manager in this team, what does success look like in the first 6–12 months—both in terms of project delivery and in coaching junior analysts?”**
+   *(Signals you’re already thinking about performance and leadership expectations.)*
+
+---
+
+### **7.2 Company-Specific Questions**
+
+✅ *Prove you researched Deloitte, its values, and Assurance mission*
+
+3. **“Deloitte emphasizes building public trust through transparent reporting and responsible data use. How is the Audit & Assurance analytics group currently leveraging AI/ML responsibly—especially with emerging risks around Generative AI and regulatory compliance?”**
+   *(Shows alignment with Deloitte’s public-interest and compliance focus.)*
+
+4. **“Deloitte talks about fostering inclusion and measurable impact. Can you share an example of how these values translate into the way cross-disciplinary teams (audit, risk, data science) collaborate on Assurance projects?”**
+   *(Shows you’ve read about Deloitte’s culture and want to see how it plays out in practice.)*
+
+---
 
 
-# 7. MISCELLANEOUS
+# 8. MISCELLANEOUS
 
-#### 7.1 Regression Metrics: From Covariance to Adjusted R²
+#### 8.1 Regression Metrics: From Covariance to Adjusted R²
 
 1. **Covariance**
 
