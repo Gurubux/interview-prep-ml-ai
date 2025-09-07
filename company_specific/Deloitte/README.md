@@ -531,6 +531,109 @@ I’d acknowledge TF-IDF’s strengths in explainability, but suggest combining 
 
 ---
 
+### 2.5.4. NLP Math Summary
+
+---
+
+#### **1. Vector Norm (Magnitude / Length)**
+
+For vector $A = [a_1, a_2, \dots, a_n]$:
+
+$$
+||A|| = \sqrt{\sum_{i=1}^n a_i^2}
+$$
+
+👉 Measures the **length of a vector** in n-dimensional space.
+Example: $A=[3,4]$ → $||A||=\sqrt{3^2+4^2}=5$.
+
+---
+
+#### **2. Cosine Similarity**
+
+$$
+\text{cosine\_similarity}(A,B) = \frac{A \cdot B}{||A|| \, ||B||}
+$$
+
+* Dot product in numerator.
+* Norms in denominator.
+* Range = $[-1,1]$.
+
+👉 Measures the **angle between two vectors** (closeness in direction, not magnitude).
+
+---
+
+#### **3. Euclidean Distance (L2)**
+
+$$
+d(A,B) = \sqrt{\sum_{i=1}^n (a_i - b_i)^2}
+$$
+
+👉 Straight-line distance between two vectors.
+
+* Sensitive to scale.
+* Good for dense embeddings.
+
+---
+
+#### **4. Manhattan Distance (L1)**
+
+$$
+d(A,B) = \sum_{i=1}^n |a_i - b_i|
+$$
+
+👉 “City-block” distance — adds up absolute differences.
+
+* Robust in sparse spaces (like TF-IDF).
+
+---
+
+#### **5. Jaccard Similarity**
+
+For two sets $A, B$:
+
+$$
+J(A,B) = \frac{|A \cap B|}{|A \cup B|}
+$$
+
+👉 Measures **overlap** between sets.
+
+* 1 = identical sets.
+* 0 = no overlap.
+* Often used with **bag-of-words models**.
+
+---
+
+#### **6. TF-IDF (Term Frequency – Inverse Document Frequency)**
+
+$$
+TF(t, d) = \frac{\text{count of term } t \text{ in document } d}{\text{total terms in document } d}
+$$
+
+$$
+IDF(t) = \log \Bigg(\frac{N}{1 + n_t}\Bigg)
+$$
+
+$$
+TF\text{-}IDF(t,d) = TF(t,d) \times IDF(t)
+$$
+
+* $N$ = total documents
+* $n_t$ = docs containing term $t$
+
+👉 Highlights words that are **important in a document but rare across corpus**.
+
+---
+
+#### ✅ Deloitte Audit Example Connections
+
+* **Norms** → required for cosine similarity in document comparison.
+* **Cosine similarity** → measure closeness of two audit reports.
+* **Euclidean/Manhattan** → compare embedding distances (e.g., fraud vs error).
+* **Jaccard** → compare clause overlap between contracts.
+* **TF-IDF** → flag unusual terms in financial reports.
+* 
+---
+
 ## 2.6 Experience developing Generative AI projects.
 
 ---
@@ -741,13 +844,8 @@ Acronyms / Frameworks That Apply:
 
 
 # 7. MISCELLANEOUS
-Got it 👍 — here’s the **compact Summary Flow with all key formulas** included:
 
----
-
-# 🔹 Summary Flow (Start → End)
-
-# Regression Metrics: From Covariance to Adjusted R²
+#### 7.1 Regression Metrics: From Covariance to Adjusted R²
 
 1. **Covariance**
 
@@ -796,10 +894,3 @@ $$
 $$
 AdjR^2 = 1 - \Bigg( \frac{(1 - R^2)(n - 1)}{n - k - 1} \Bigg)
 $$
-
-
----
-
-👉 That’s the **clean step-by-step chain** from Covariance → r → R² → Adjusted R² with all formulas.
-
-Would you like me to also make this into a **visual diagram (flowchart)** so you can use it as a one-slide reference for interviews?
