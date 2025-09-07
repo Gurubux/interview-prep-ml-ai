@@ -551,7 +551,7 @@ Example: $A=[3,4]$ → $||A||=\sqrt{3^2+4^2}=5$.
 #### **2. Cosine Similarity**
 
 $$
-\text{cosine\_similarity}(A,B) = \frac{A \cdot B}{||A|| \, ||B||}
+\text{cosine similarity}(A,B) = \frac{A \cdot B}{||A|| \, ||B||}
 $$
 
 * Dot product in numerator.
