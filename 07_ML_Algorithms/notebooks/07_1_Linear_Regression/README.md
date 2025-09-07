@@ -122,8 +122,6 @@ $$
 
 Where **lr** is the learning rate (step size).
 
-> Your earlier line had a formatting slip — the correct factor is **(2/n)**, not **n/2**.
-
 ---
 
 ## 5) Full algorithm (plain steps)
@@ -222,3 +220,101 @@ Loss = mean(e²),
 grad = $\tfrac{1}{n}X_b^\top e$,   
 update w ← w − lr·grad.  
 
+
+---
+
+# Assumptions of Linear Regression
+
+| Assumption                                         | How tested                                                                                              | Plot used                                                                                        | Simple use case where it works                                                            | Where it is not met                                                                                             |                                                                                                 |                                                                                                    |
+| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| **1) Linearity**                                   | Compare linear vs flexible fits (Quadratic/Spline) and check ΔRMSE; Ramsey **RESET**; partial residuals | Residuals vs *x*; Linear vs Quadratic/Spline overlay; Partial residual (component+residual) plot | Physics lab with linear sensor response; small *x*-range of a smooth function             | Sinusoidal/curved relationships; saturation effects; thresholds; polynomial trends                              |                                                                                                 |                                                                                                    |
+| **2) Independence of Errors (No Autocorrelation)** | **Durbin–Watson** (DW≈2 good); Lag-1 autocorr ρ₁; ACF/Ljung–Box                                         | Residuals over ordered *x* (or time); Lag plot (*e*ₜ vs *e*ₜ₋₁); ACF bars                        | Cross-sectional samples collected independently                                           | Time-series with inertia/seasonality (energy load, web traffic); sensor drift; spatial/clustered data           |                                                                                                 |                                                                                                    |
+| **3) Homoscedasticity (Constant Variance)**        | **Breusch–Pagan / White** tests; variance-by-bin ratio; correlation of Var(residual) vs fitted          | Residuals vs Fitted (“fan” shape?); Scale–Location (√                                            | residual                                                                                  | vs ŷ); Variance-by-bin bar chart                                                                                | Controlled experiments with uniform measurement noise; stabilized data after log/sqrt transform | Income vs spend (variance grows with mean); counts (Poisson-like); financial volatility clustering |
+| **4) Normality of Errors**                         | **Jarque–Bera**, **Shapiro–Wilk** (prefer tests on **studentized residuals**); Q–Q alignment            | Histogram + Normal curve; **Q–Q plot**                                                           | Many small independent noise sources (CLT); well-specified linear models without outliers | Heavy tails (finance returns), skewed positive outcomes (times, costs), mixtures/outliers                       |                                                                                                 |                                                                                                    |
+| **5) No Multicollinearity (for multiple *X*)**     | **VIF** (e.g., VIF<5–10), condition number; inspect correlations                                        | Pairwise correlation heatmap; Partial regression plots                                           | Orthogonal experimental designs; well-separated, engineered features                      | Highly correlated features (e.g., height & arm span); one-hot traps; polynomial features without regularization |                                                                                                 |                                                                                                    |
+| **6) Exogeneity / No Endogeneity**                 | Study design/causal reasoning; **Hausman test** (panel/IV); use **IV/2SLS** if needed                   | (No definitive residual plot) — may inspect residuals vs suspected omitted drivers               | Randomized experiments; strong controls with no feedback                                  | Omitted variables; reverse causality; measurement error in *X*; simultaneity (price ↔ demand)                   |                                                                                                 |                                                                                                    |
+
+> Notes:  
+> • For **Normality**, test **studentized** residuals (scale by √(1−hᵢᵢ)) to avoid leverage-induced variance mixing.  
+> • When assumptions fail for **inference**, you can often keep the mean model but use **robust SEs** (HC/Newey–West), transforms, or more appropriate models (GLMs, ARIMA/GLS, mixed effects).
+
+---
+
+# Regression Diagnostics Quick Reference
+
+When you fit a linear regression, check these diagnostics to validate assumptions and spot issues. Here’s a quick guide:
+
+### Model fit & shape
+
+* **Residuals vs Fitted** — “Are misses random?”
+  Random cloud around 0 = good. Curve/funnel = wrong shape or non-constant variance.
+
+* **Scale–Location (√|residual| vs ŷ)** — “Does spread change?”
+  Flat band = constant variance. Upward slope = heteroscedasticity.
+
+* **Q–Q Plot (residuals)** — “Bell-shaped?”
+  Points on the line = normal-ish. S-curve = skew. Bent tails = heavy/light tails.
+
+* **Ramsey RESET** — “Too simple a line?”
+  Significant = model misspecification/nonlinearity; add transforms/terms.
+
+* **Partial (Component+Residual) Plot** — “Each X linear on y?”
+  Straight-ish = fine. Curvy = transform that predictor.
+
+### Error independence (time/ordering)
+
+* **Durbin–Watson (DW)** — “Are mistakes chained?”
+  \~2 = independent. <2 = positive autocorr; >2 = negative autocorr.
+
+* **Residual ACF (bars)** — “Memory in errors?”
+  Bars near 0 = independent. Big early spikes = autocorrelation.
+
+### Variance constancy (homoscedasticity)
+
+* **Breusch–Pagan / White test** — “Equal spread?”
+  p<0.05 → heteroscedasticity. Use robust SEs/transform/WLS.
+
+* **Variance-by-bin (residuals)** — “Does variance grow?”
+  Similar bin heights = OK. Rising pattern = hetero.
+
+### Normality (for inference)
+
+* **Jarque–Bera / Shapiro–Wilk** — “Bell-ish tails?”
+  p≥0.05 = no strong evidence against normality (prefer tests on **studentized** residuals).
+
+* **Histogram + Normal curve** — “Visual sanity check.”
+  Symmetric bell around 0 = fine. Long tails/lopsided = not normal.
+
+### Multicollinearity (multiple X)
+
+* **VIF** — “Are X’s saying the same thing?”
+  VIF > 5–10 → multicollinearity risk (unstable coeffs).
+
+* **Condition Number** — “Overall collinearity.”
+
+  > 30 → potential problems; consider regularization/feature changes.
+
+### Outliers & influence
+
+* **Studentized Residuals** — “Big misses?”
+  |r| > 3 → outlier candidate.
+
+* **Leverage (hᵢᵢ)** — “Unusual X?”
+
+  > 2p/n (roughly) = high leverage; watch combined with big residuals.
+
+* **Cook’s Distance** — “Does a point sway the fit?”
+
+  > 4/n → influential; inspect.
+
+---
+
+### Handy thresholds (sound confident)
+
+* **DW ≈ 2** OK; **<1.5 / >2.5** suspicious.
+* **VIF > 5–10** concerning.
+* **BP/White p < 0.05** heteroscedastic.
+* **JB/Shapiro p ≥ 0.05** normal enough (use **studentized** residuals).
+* **|studentized residual| > 3** outlier; **Cook’s D > 4/n** influential.
+
+If you want, I can drop a compact “Diagnostics” section into your README with these bullets and a one-liner on what to do when each flag trips.
