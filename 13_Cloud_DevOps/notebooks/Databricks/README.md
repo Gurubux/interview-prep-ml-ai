@@ -1,8 +1,7 @@
 # Databricks
 
-This file is a quick, exam-aligned inventory of **Databricks tools, services, and utilities** that appeared across 20 accreditation-style questions. It’s meant as a **starting map** for your learning journey—skim the categories, then go deeper in the official docs/labs as you build muscle memory.
-
----
+## Learning Sources
+* [Databricks Academy](https://customer-academy.databricks.com/learn/catalog)
 
 ## Table of Contents
 
