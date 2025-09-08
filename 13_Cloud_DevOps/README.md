@@ -59,6 +59,20 @@ Each subtopic will include **theory notes**, **hands-on notebooks**, and/or **de
 
 ---
 
+### Databricks
+1. [Lakehouse & Delta Lake basics](#)
+2. [Unity Catalog](#)
+3. [Databricks SQL](#)
+4. [DLT](#)
+5. [Workflows / Lakeflow Jobs](#)
+6. [Serverless](#)
+7. [Delta Sharing](#)
+8. [AI/BI (Genie) & Assistant](#)
+9. [MosaicAI](#)
+10. [Marketplace](#)
+
+---
+
 ### 4. DevOps Core  
 - [Git ✅](https://github.com/Gurubux/interview-prep-ml-ai/blob/main/13_Cloud_DevOps/notebooks/Git/README.md)  
 - [CI/CD (GitHub Actions, GitLab CI, Jenkins)](#)  

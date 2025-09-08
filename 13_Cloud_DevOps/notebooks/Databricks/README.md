@@ -1,6 +1,4 @@
-# Databricks — Starter README
-
-**Path:** `Cloud Platforms & DevOps/databricks/README.md`
+# Databricks
 
 This file is a quick, exam-aligned inventory of **Databricks tools, services, and utilities** that appeared across 20 accreditation-style questions. It’s meant as a **starting map** for your learning journey—skim the categories, then go deeper in the official docs/labs as you build muscle memory.
 
@@ -135,3 +133,9 @@ This file is a quick, exam-aligned inventory of **Databricks tools, services, an
 10. **Marketplace** → subscribe to a dataset and use it in your SQL/DLT pipeline.
 
 ---
+
+## Dashboard snapshot
+[Databricks Dashboard Example](https://docs.databricks.com/sql/user/dashboards.html)
+
+## Databricks Certifications
+[Databricks Certified Data Engineer Associate](https://docs.databricks.com/certification/data-engineer-associate.html)
