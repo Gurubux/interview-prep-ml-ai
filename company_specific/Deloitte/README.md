@@ -905,6 +905,45 @@ Acronyms / Frameworks That Apply:
 ### From the book Notes
 
 # 6. BUSINESS CASE STUDY QUESTIONS
+[CASE Interview Tips from Deloitte](https://www.deloitte.com/us/en/careers/join-deloitte-careers-case-interview-tips.html)  
+Apply this five-step approach while working through the case interview:  
+- **Understand the issue:** Ask clarifying questions as needed to ensure you fully understand the problem at hand.
+- **Identify the underlying assumptions**: Recognize and articulate the assumptions that underpin the case scenario.
+- **Summarize specific issues and findings**: Clearly outline the key issues and your findings based on the information provided.
+- **State your recommendations**: Provide well-thought-out recommendations based on your analysis.
+- **Outline next steps and expected results/impacts**: Discuss the potential next steps and the expected outcomes or impacts of your recommendations.  
+
+[Case Interview: 6 Tips to Help You Ace Your Case](https://www.myconsultingoffer.org/case-study-interview-prep/deloitte-case-interview/)  
+
+
+Deloitte uses case interviews as a way to assess skills it values in its consultants.  
+- Structured problem solving
+- Analytic skills
+- A balance of creativity and practicality
+- Resilience
+
+Steps to tackle Case Interview
+### Opening
+**This is where you make sure you understand the client’s problem.** 
+1. Listen carefully to the case prompt - Recap and confirm Clients Objective
+2. Ask clarifying questions
+
+### Structure
+**This is where you brainstorm all factors relevant to the problem and organize them to ensure you address them in a complete and logical manner.**
+3. Take a moment to structure your thoughts  
+Mastering the structure phase of the interview is not as easy as the opening, but it’s critical to ensure you have the structured problem-solving approach that will lead you to the right answer to the case.
+
+### Analysis
+**This is where you gather data to identify which of the factors related to the business case are the most important. You’ll use this data to create a recommendation for your client.**
+4. Communicate your framework
+5. Work through the case
+
+### Conclusion
+**Here, you present your recommendation to “the client” (your interviewer), in a well-structured and persuasive manner.**
+6. Summarize your recommendation
+7. Highlight risks associated with your recommendation
+8. Answer any questions the interviewer may have
+
 
 **1. Q:** A client’s financial data has missing values. How would you handle it?  
 **A:** First, check why values are missing. If small, I’d fill using averages/medians. If big, I’d use ML models to estimate. Always document the approach for audit transparency.
@@ -962,9 +1001,85 @@ Acronyms / Frameworks That Apply:
 
 ---
 
-# 7. QUESTIONS TO ASK THE INTERVIEWER
+# 7. SCENARIO-BASED QUESTIONS
 
-### **7.1 Role-Specific Questions**
+[Deloitte Website Scenario Questions](hhttps://experience.deloitte.com/scenariointerview/landing-2581O-2872QI.html)  
+
+**Asseses :**
+1. Thought process
+2. Creativity
+3. Comfort with ambiguity
+
+**Tip 1. Clear thinking**  
+Make sure you understand the scenario presented by your interviewer  
+**Tip 2. Practical judgement**  
+Ask clarifying questions or additional questions if you feel you need more information before responding  
+**Tip 3. Strategic framing**  
+Develop a logical structure and identify assumptions; take notes while the scenario is being read to help you structure your thoughts and think through how you’d like to respond  
+**Tip 4. Summary analysis**  
+Summarize specific issues and findings; state your assumptions and the issues presented in the scenario  
+**Tip 5. Final recommendations**  
+Provide your final thoughts, recommendations, and answers to the question at hand  
+
+
+1. [Martha May’s Cookies Audit](https://experience.deloitte.com/12-controls_compliance_and_finance-accounting_and_internal_controls-internal_audit_itsa)  
+2. [Access Security SOX Readiness](https://experience.deloitte.com/13-technology-accounting_and_internal_controls_itsa)
+3. [Applied AI, Automation, and the Future of Work scenario!](https://experience.deloitte.com/4-analytics-regulatory)
+
+### **Q1. What are some examples of prerequisites and/or information that should be obtained prior to developing the roadmap for the client?**
+
+**Answer:**
+Before developing the roadmap, it’s important to gather baseline information, such as:
+
+1. **Current Landscape** – Understand which departments are already using AI/automation, what tools are in place, and where gaps exist.
+2. **Maturity Assessment** – Evaluate each department’s readiness and capability to effectively adopt and scale AI.
+3. **Strategic Alignment** – Identify the client’s broader business objectives and ensure AI initiatives directly support them.
+4. **Existing Use Cases** – Review AI pilots already underway (e.g., chatbots) and assess their effectiveness.
+5. **Governance & Risk Posture** – Understand data governance, compliance, and risk tolerance levels.
+
+---
+
+### **Q2. What is a roadmap and what does it typically contain?**
+
+**Answer:**
+A roadmap is a **high-level strategic plan** that outlines how the client will move from their current state to the desired future state. It typically includes:
+
+* **Workstreams or Initiatives** – Key areas of focus (e.g., automation of back-office processes, AI in customer service).
+* **Milestones & Dependencies** – Sequenced steps showing what must be achieved and in what order.
+* **Outcomes & Value Drivers** – The business impact expected from each stage.
+* **Owners & Timelines** – Accountability and delivery schedules, often supported by more detailed implementation plans.
+
+---
+
+### **Q3. What are some example outcomes of executing the roadmap?**
+
+**Answer:**
+Executing the roadmap would deliver:
+
+1. **High-Value Use Case Identification** – Prioritised list of AI and automation opportunities with tangible ROI.
+2. **Strategic Alignment** – Technology initiatives aligned with corporate goals and customer needs.
+3. **Operational Efficiency** – Streamlined processes and reduced manual effort across departments.
+4. **Workforce Transition** – Reskilling programs and change management to support employees in adapting to AI-driven ways of working.
+5. **Stronger Governance** – Frameworks for ethical, secure, and compliant AI adoption.
+
+---
+
+### **Q4. What are some key areas to consider when thinking about what data should be used and fed to AI applications?**
+
+**Answer:**
+Key considerations include:
+
+1. **Data Quality** – Ensure data is accurate, complete, and representative to avoid biased outcomes.
+2. **Ethics & Fairness** – Avoid using data that could lead to discriminatory or unethical decisions.
+3. **PII/PHI Concerns** – Manage personally identifiable or protected health information carefully, in line with GDPR, HIPAA, or other regulations.
+4. **Data Governance** – Understand where the data comes from, where it flows, and who has access.
+5. **Intended Use** – Align data inputs with business objectives to ensure responsible and explainable AI outcomes.
+
+---
+
+# 8. QUESTIONS TO ASK THE INTERVIEWER
+
+### **8.1 Role-Specific Questions**
 
 ✅ *Show you understand the day-to-day, tools, and expectations*
 
@@ -976,7 +1091,7 @@ Acronyms / Frameworks That Apply:
 
 ---
 
-### **7.2 Company-Specific Questions**
+### **8.2 Company-Specific Questions**
 
 ✅ *Prove you researched Deloitte, its values, and Assurance mission*
 
@@ -989,9 +1104,9 @@ Acronyms / Frameworks That Apply:
 ---
 
 
-# 8. MISCELLANEOUS
+# 9. MISCELLANEOUS
 
-#### 8.1 Regression Metrics: From Covariance to Adjusted R²
+#### 9.1 Regression Metrics: From Covariance to Adjusted R²
 
 1. **Covariance**
 
