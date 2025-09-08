@@ -41,6 +41,28 @@ BUILD STRONG RELATIONSHIP with INTERVIEWER_
 - Able to apply data science principles through a business lens.
 - Experience delivery data science for financial industry or large/complex organisations.
 
+
+### 1.1 "Explain SHAP to a non-technical partner in 60 seconds with a finance example."
+
+**Answer (60-second partner-friendly):**
+
+> “In Railofy, we built a model that predicts whether a train ticket will get confirmed. Each day, about 10,000 PNRs go through the system and the prediction feeds directly into the pricing of insurance. The risk for us was *false positives* — if the model said a ticket was highly likely to confirm but it didn’t, the company had to pay out, which hit our bottom line.
+>
+> To build trust in the model, we used SHAP — a tool that explains predictions in simple terms. Think of it like an itemised bill: for each ticket, SHAP shows how much each factor — such as travel date, route, or waitlist position — pushed the prediction up or down. We presented this visually on dashboards with “what-if” sliders, so leaders could test scenarios and see how changing one factor, like route, affected the outcome.
+>
+> This helped our COO and CPO see whether a ‘false positive’ was due to a rare situation the model couldn’t yet handle, or whether we needed to tighten thresholds. As a result, we introduced a risk-mitigation model that adjusted probability cut-offs, reducing losses while keeping transparency high.”
+
+---
+
+⚡ Why this works:
+
+* Uses **finance language**: “bottom line,” “payout,” “thresholds,” “risk mitigation.”
+* Explains SHAP as an **itemised bill** → easy metaphor.
+* Anchors in **business impact**: model trust + financial protection.
+* Stays under \~200 words (\~55–60 seconds when spoken).
+
+--- 
+
 # 2. WHAT I HAVE TO PREPARE
 ## 2.1 Azure
 ## 2.2 Mathematics, Pprobability, and Statistics.
@@ -155,6 +177,47 @@ Type II = missed alarm (ignoring fraud). In audit, Type II is riskier.
 #### prompt engineering
 #### fine tuning
 #### resource augmentation.
+
+![img.png](img.png)  
+
+
+### 🛡️ Guardrails & Compliance Built into the LLM Review System
+
+**1. Data Governance & Security**
+
+* **Access controls & encryption** → restricted user roles (Medical, Legal, Regulatory reviewers).
+* **No leakage of proprietary Pharma documents** → sandboxed processing, no external API calls.
+* **Audit logs** for every claim review, preserving full traceability.
+
+**2. Regulatory Alignment**
+
+* **ABPI (UK Code of Practice), FDA (US promotional materials), EMA (EU guidelines)** aligned → ensured claims were evidence-backed.
+* **Reference-only validation** → every claim had to cite **peer-reviewed literature or approved product label**; no hallucinations allowed.
+* **Critical rule** → *marketing claim itself could never be treated as evidence*.
+
+**3. Explainability & Transparency**
+
+* **Structured outputs** → claim, reference match, decision (supported/not supported), rationale.
+* **Verbatim references extracted** from source documents for audit-ready evidence.
+* **Confidence scores & limitations flagged** where reference data was weak.
+
+**4. Bias & Accuracy Controls**
+
+* **Hallucination guardrails** → LLM fine-tuned with prompt constraints to avoid unverifiable outputs.
+* **Cross-validation with multiple sources** (papers, regulatory websites).
+* **Human-in-the-loop review** → final sign-off always by MLR team.
+
+**5. Governance & Auditability**
+
+* **Version control of model + prompts** → trace which model version reviewed which deck.
+* **Documented SOPs** for LLM use, review escalation, and exception handling.
+* **Continuous monitoring** of outputs against gold-standard reference datasets.
+
+---
+
+### 🎯 Keywords Deloitte will like:
+
+* **MLR compliance, ABPI, FDA, EMA, audit logs, explainability, human-in-the-loop, bias control, data governance, transparency, ethical AI, traceability.**
 
 ---
 
@@ -675,6 +738,56 @@ Examples:
 
 ## 2.8 Azure Databricks
 
+### 1. **Your AWS Experience (What You’ve Done)**
+
+At Railofy, you:
+
+* **Model Development**: Built ML models (e.g., XGBoost, Isolation Forest) for ticket prediction & anomaly detection.
+* **Data Storage/ETL**: Used **S3** as data lake, **Glue** for ETL, **Athena/Redshift** for queries.
+* **ML Lifecycle**: Used **SageMaker** for training, tuning, deployment.
+* **Pipelines**: Orchestrated workflows with **Step Functions** & **Lambda**.
+* **Monitoring**: Used **CloudWatch** & ELK → Grafana dashboards.
+* **MLOps**: MLflow (open source) for tracking, integrated with Docker/ECR for containers.
+
+---
+
+### 2. **Azure Equivalents (Mapping)**
+
+| AWS Service / What You Did       | Azure / Databricks Equivalent                            | How to Position in Interview                                                                                                                                        |
+| -------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **S3 (data lake)**               | **Azure Data Lake Storage (ADLS Gen2)**                  | Say: *“We stored raw + processed datasets in S3 buckets, partitioned for scale. On Azure I’d use ADLS Gen2 which integrates with Synapse & Databricks seamlessly.”* |
+| **Glue (ETL)**                   | **Azure Data Factory (ADF)** or **Databricks notebooks** | *“ETL pipelines in Glue → On Azure I’d use ADF for orchestration or Databricks for Spark-based transformations.”*                                                   |
+| **Athena / Redshift (querying)** | **Azure Synapse Analytics**                              | *“We queried data with Athena/Redshift; in Azure, Synapse plays the same role with serverless SQL pools.”*                                                          |
+| **SageMaker (end-to-end ML)**    | **Azure Machine Learning (Azure ML)**                    | *“In SageMaker, we trained/tuned/deployed ML models. Azure ML provides similar workspace for model dev, AutoML, and endpoint deployment.”*                          |
+| **Step Functions**               | **Azure Logic Apps / Azure ML Pipelines**                | *“Our ML pipelines were orchestrated with Step Functions. In Azure I’d use ML Pipelines or Logic Apps.”*                                                            |
+| **Lambda (serverless trigger)**  | **Azure Functions**                                      | *“We used Lambda for lightweight triggers (data arrival, model inference). Azure Functions is the counterpart.”*                                                    |
+| **CloudWatch + ELK/Grafana**     | **Azure Monitor + Log Analytics + App Insights**         | *“For monitoring infra/logs, CloudWatch/ELK → Azure Monitor/Log Analytics provide same observability.”*                                                             |
+| **ECR + Docker for models**      | **Azure Container Registry (ACR) + AKS (Kubernetes)**    | *“In AWS, models were containerized in ECR → Deployed on ECS/EKS. On Azure, I’d use ACR + AKS.”*                                                                    |
+| **MLflow (open-source)**         | **MLflow in Azure Databricks**                           | *“We tracked experiments with MLflow. Azure Databricks natively supports MLflow for lineage & tracking, so skills transfer directly.”*                              |
+
+---
+
+### 3. **Databricks Angle**
+
+Since Deloitte uses **Azure Databricks** a lot in **Audit & Assurance**, connect it like this:
+
+* On AWS, you likely used **EMR** or **Glue Spark jobs** → Equivalent is **Azure Databricks (Spark cluster)**.
+* MLflow you used → same inside Databricks (native integration).
+* Python-based notebooks you used in SageMaker/Glue → directly portable to Databricks notebooks.
+* Grafana/ELK dashboards → could be implemented in Databricks with **Delta Lake + Power BI**.
+
+---
+
+### 4. **How to Frame in Interview**
+
+Sample script you can use:
+
+> “My hands-on cloud experience is on **AWS**, where I built end-to-end ML workflows — using **S3 as data lake, Glue for ETL, SageMaker for training/deployment, and Step Functions + Lambda for orchestration**. I also containerized models with **ECR + Docker** and tracked them in **MLflow**.
+>
+> If I map this to Azure: **Azure ML** provides the same end-to-end ML lifecycle as SageMaker; **ADLS + Synapse + Data Factory** replace S3 + Redshift + Glue; and **Azure Functions/Logic Apps** map to Lambda/Step Functions. Since I already used **MLflow**, transitioning to **Azure Databricks** is straightforward as it’s the native experiment-tracking tool.
+>
+> The underlying concepts — data lakes, pipelines, model training, deployment, monitoring — remain identical. It’s mostly about learning Azure’s naming conventions and integrations, which I am already doing.”
+
 ---
 
 ## 2.9 Azure MLflow
@@ -685,11 +798,94 @@ Examples:
 
 ---
 
-## 2.11 PowerBI
+## 2.11 PowerBI & 2.12 Tableau.
+
+Got it 👍 Let’s make this very practical for your **Deloitte Manager, Data Science & ML – Audit & Assurance** prep. You want to confidently bridge your **hands-on experience (Plotly, Streamlit, EvidentlyAI, Kibana, Grafana)** with **Power BI and Tableau**, so it doesn’t feel like a gap.
 
 ---
 
-## 2.12 Tableau.
+### 🔑 Mapping Your Experience → Power BI & Tableau
+
+| Your Tool       | What It Covers                       | Equivalent in Tableau                      | Equivalent in Power BI                                |
+| --------------- | ------------------------------------ | ------------------------------------------ | ----------------------------------------------------- |
+| **Plotly**      | Interactive charts (Python)          | Calculated fields + interactive dashboards | DAX measures + visuals (e.g., slicers, drill-through) |
+| **Streamlit**   | Lightweight app/dashboard deployment | Tableau Dashboards with filters/actions    | Power BI Reports & Apps (publish to service)          |
+| **EvidentlyAI** | Monitoring ML metrics, drift         | Tableau extensions / calculated KPIs       | Power BI dashboards + custom visuals                  |
+| **Kibana**      | Log/metric dashboards                | Data blending + live connections           | DirectQuery + real-time dashboards                    |
+| **Grafana**     | Real-time monitoring, time series    | Tableau live connection with alerts        | Power BI streaming datasets + Power Automate alerts   |
+
+💡 *Translation point for interview*: “While I’ve built dashboards in Plotly/Streamlit and monitored ML drift in EvidentlyAI/Grafana, the underlying principles of **data modeling, KPI definition, interactivity, and stakeholder storytelling** are exactly what Tableau and Power BI operationalize at scale.”
+
+---
+
+### ⚡ Power BI – Key Refreshers (Manager Level)
+
+1. **Data Model**
+
+   * Star schema, fact vs. dimension tables
+   * Relationships setup (1\:many, many\:many)
+
+2. **DAX (Data Analysis Expressions)**
+
+   * `CALCULATE()`, `FILTER()`, `ALL()` – essential functions
+   * Time-intelligence: `YTD()`, `SAMEPERIODLASTYEAR()`
+
+3. **Deployment / Scalability**
+
+   * Row-Level Security (RLS) for compliance (big in Audit!)
+   * Scheduled refresh & DirectQuery vs Import mode
+   * Workspaces and Power BI Service for collaboration
+
+4. **Audit-Relevant Use Case**
+
+   * Compliance dashboards: monitoring data access logs, anomalies in financial KPIs
+   * “Explain” feature for ML-like insights
+
+---
+
+### ⚡ Tableau – Key Refreshers (Manager Level)
+
+1. **Data Connections**
+
+   * Live vs Extract
+   * Joins vs Blends
+
+2. **Calculated Fields & LOD Expressions**
+
+   * FIXED, INCLUDE, EXCLUDE for aggregation control
+   * Window functions (moving avg, rank)
+
+3. **Dashboard Design**
+
+   * Actions (filter, highlight, URL)
+   * Parameters for “what-if” analysis
+
+4. **Deployment / Scalability**
+
+   * Tableau Server vs Tableau Online
+   * Permissions & governance (important for Audit/Assurance clients)
+   * Incremental refresh for large data
+
+5. **Audit-Relevant Use Case**
+
+   * Financial assurance: anomaly detection visuals, drill-down into client GL accounts, compliance KPIs across regions
+
+---
+
+### 🎯 Interview Positioning
+
+You don’t need to sound like a daily Tableau/Power BI developer. As a **Manager**, you need to show:
+
+* You understand **the core building blocks** (data models, calculated fields, interactivity).
+* You can **guide teams** to build scalable dashboards.
+* You can **translate business questions → dashboards** with regulatory/compliance context.
+
+---
+
+### 🚀 Talking Point Template
+
+> “In my experience with Plotly, Streamlit, and Grafana, I’ve built interactive dashboards for ML monitoring and stakeholder reporting. The shift to Power BI and Tableau is natural—since the principles of **data modeling, KPI definition, and user-focused storytelling** are the same.
+> For example, in Power BI I’d leverage DAX for time-intelligence, row-level security for audit compliance, and scheduled refresh for governance. In Tableau, I’d use LOD expressions to control aggregation and design parameter-driven dashboards for scenario analysis. I’ve done personal projects and freelance oversight on both tools, so I can comfortably lead teams and ensure outputs are both technically sound and stakeholder-friendly.”
 
 ---
 
@@ -754,6 +950,7 @@ Key points:
 		-> Research on Latest ACtivity
 
 ### WHY THE DEPARTMENT
+[Deloitte Audit and Assurance](https://www.deloitte.com/global/en/services/audit-assurance/services/audit-innovation.html)
 
 ### Q3 WHY CONSULTING
 	-> Challenges, Everyday is different
