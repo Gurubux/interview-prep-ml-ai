@@ -178,8 +178,11 @@ Type II = missed alarm (ignoring fraud). In audit, Type II is riskier.
 #### fine tuning
 #### resource augmentation.
 
-![img.png](img.png)  
+![img.png](img.png)    
+Retrieval-augmented generation (RAG)  
 ![img_1.png](img_1.png)
+Build advanced Retrieval-augmented generation systems  (RAG)  
+![img_2.png](img_2.png)
 
 ### 🛡️ Guardrails & Compliance Built into the LLM Review System
 
