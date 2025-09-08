@@ -179,7 +179,7 @@ Type II = missed alarm (ignoring fraud). In audit, Type II is riskier.
 #### resource augmentation.
 
 ![img.png](img.png)  
-
+![img_1.png](img_1.png)
 
 ### 🛡️ Guardrails & Compliance Built into the LLM Review System
 
