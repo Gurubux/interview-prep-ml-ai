@@ -135,7 +135,7 @@ This file is a quick, exam-aligned inventory of **Databricks tools, services, an
 ---
 
 ## Dashboard snapshot
-[Databricks Dashboard Example](https://docs.databricks.com/sql/user/dashboards.html)
+![Databricks Dashboard Example](https://github.com/Gurubux/interview-prep-ml-ai/blob/main/13_Cloud_DevOps/notebooks/Databricks/databricks_dashboard.png)
 
 ## Databricks Certifications
-[Databricks Certified Data Engineer Associate](https://docs.databricks.com/certification/data-engineer-associate.html)
+![Databricks Fundamentals Certificate](https://github.com/Gurubux/interview-prep-ml-ai/blob/main/Certificates/2308_3_1008963_1757288113_Databricks%20-%20Generic.pdf)
