@@ -1073,45 +1073,79 @@ product evolves in line with customer needs.”
 
 	https://www.youtube.com/watch?v=XGGpnVBWSDw&ab_channel=MyConsultingOffer  
 	https://nodeflair.com/companies/deloitte/interviews/data-scientist  
-	https://www.interviewquery.com/interview-guides/deloitte-data-scientist  
-	
-	Not What you Achieved rather HOW you DID it  
+	https://www.interviewquery.com/interview-guides/deloitte-data-scientist
 
-### Q2 Tell me About yourself
+### Q1 WHY DELOITTE
 
-	-> Why you fit for your job
-	-> Key Roles that showcase your skills and accomplishment
-	-> Link your roles together.
-	-> Align your Journey
+> “For me, Deloitte is the natural choice because it aligns perfectly with how I define purpose in my own career. I’m someone who is driven by solving problems and bridging the gap between **technical depth** and **business impact**. That’s what keeps me motivated—delivering solutions that are both cutting-edge and meaningful for stakeholders.
 
-### WHY DELOITTE
+> Deloitte’s values resonate strongly with me:
 
-	-> Why Does Deloitte Stands out for you ? Innovation AI Data ? 
-		-> Research on Latest ACtivity
+* **Lead the way** → I’ve always challenged myself to stay at the frontier of AI and ML, from building compliance-driven systems in healthcare to experimenting with GenAI responsibly. I want to contribute that same forward-looking mindset here.
+* **Serve with integrity** → In my projects, trust has been as important as accuracy. Whether it’s compliance in pharma or fairness in health analytics, I’ve built systems with governance and transparency at the core. That’s very much in line with how Deloitte defines assurance.
+* **Take care of each other & Foster inclusion** → I thrive in collaborative, diverse teams. In past roles, I’ve facilitated workshops with clinicians, patients, and business leaders—bringing everyone into the process. Deloitte’s culture of inclusion is exactly the environment where I can both contribute and grow.
+* **Collaborate for measurable impact** → This is the bridge I strive to build—technical innovation that delivers measurable value. Deloitte’s work in Audit & Assurance, especially with tools like **Omnia** and **PairD**, shows that focus on impact at scale.
 
-### WHY THE DEPARTMENT
+> So for me, Deloitte isn’t just another firm—it’s where I see the opportunity to **combine purpose, integrity, innovation, and impact** on a global stage. That’s why Deloitte.”
+
+---
+
+✅ **Strengths of this answer**:
+
+* Starts with your personal story → “Purpose-driven, bridging tech and business.”
+* Integrates **all 5 Deloitte values** in a natural, non-forced way.
+* References your **past experience** + Deloitte’s **innovations** (Omnia, PairD) → strong proof of alignment.
+* Stays **positive, confident, and forward-looking**.
+
+### Q2 WHY THE DEPARTMENT
 
 [Deloitte Audit and Assurance](https://www.deloitte.com/global/en/services/audit-assurance/services/audit-innovation.html)
 
+#### **Why Audit & Assurance at Deloitte?**
+
+**1. Personal Connection (Authenticity)**
+
+> “Honestly, Audit & Assurance wasn’t my default career interest. But my exposure started through my sibling, who built her career in internal auditing while qualifying as a Chartered Accountant in Dubai. Through her journey, I became familiar with the mindset of auditors—the focus on trust, controls, and governance. Later, in my own work at Kodily, I saw first-hand how compliance and governance checks are non-negotiable, especially in industries like pharma, where we built an AI-powered Medical-Legal-Regulatory (MLR) review system. That blend of technical AI capability with the discipline of compliance really resonated with me—it showed me how powerful the audit mindset can be when paired with technology.”
+
+**2. Alignment with Deloitte’s Audit & Assurance Vision (Research)**
+
+> “What excites me about Deloitte specifically is how Audit & Assurance here is not just about ticking compliance boxes but about shaping the future of the profession. Platforms like **Deloitte Omnia** show how digital audits can be more efficient and transparent—scanning controls, automating workflows, and centralising global coordination. And the introduction of **PairD**, Deloitte’s GenAI tool, demonstrates the forward-thinking approach I’m looking for: using AI to parse documents, evaluate risks, and create new human-plus-AI capabilities in a safe, ethical way. That aligns directly with how I’ve approached my own projects—using GenAI responsibly, keeping humans in the loop, and always prioritising trust.”
+
+**3. Why This Department, Why Now**
+
+> “So for me, Audit & Assurance represents the perfect intersection: the assurance mindset I’ve valued through personal exposure, and the technological transformation I’ve been driving in my career. Deloitte stands out because it is leading this space globally, embedding AI and data at the heart of assurance while putting people first. That’s the environment I want to contribute to—helping clients and regulators build trust through both robust governance and innovative technology.”
+
+---
+
+✅ This script is:
+
+* **Human + Authentic** → Starts with your sibling’s CA journey and your Kodily compliance project.
+* **Research-driven** → References **Omnia** and **PairD** by name.
+* **Forward-looking** → Frames Deloitte as shaping the future of audit with AI.
+* **Concise** → Can be delivered in \~90–120 seconds.
+
 ### Q3 WHY CONSULTING
 
-	-> Challenges, Everyday is different
-	-> Love Fast-paced
-	-> Creative Solutions
-	-> Different Stakeholder
-	-> Different Industries
-	-> Data oR Strategy Or What is your Kick ? Aha Feeling  What Excite you the most
 
-	LONG TERM ROLES
-		-> Strategic thinking
-		-> Leadership roles
-		-> Problem Solving
-		-> Communication
-		-> 5 to 10 Years
+> “For me, consulting is exciting because it allows me to **apply innovation, collaboration, and technology delivery** in environments where the **impact is immediate, diverse, and deeply human**. I enjoy solving complex problems that don’t just sit in theory but make a difference to clients and their stakeholders in real time.
+
+> Consulting also offers something I value personally—**continuous learning, adapting, and growing as a leader**. Every project brings a new challenge, a new industry context, and new perspectives, which keeps me sharp and future-ready.
+
+> And when I think of Deloitte specifically, I see a culture that amplifies these strengths. Deloitte’s emphasis on **inclusion, collaboration, and measurable impact** means I would be working in teams where diverse voices are heard, innovation is encouraged, and outcomes are delivered with integrity.
+
+> That combination of **purpose-driven work, continuous growth, and a values-led environment** is why consulting, and why consulting at Deloitte in particular, feels like the right path for me.”
+
+---
+
+✅ This answer:
+
+* Uses **your exact points** (innovation, collaboration, impact, learning).
+* Connects naturally to **Deloitte’s values** without sounding memorized.
+* Highlights both **personal motivation** and **fit with Deloitte’s culture**.
+
 
 ### Q4 TELL ME SOMETHING THAT IS NOT ON YOUR RESUME?
 
-	-> 
 
 ### Q5 TELL ME ABOUT A TIME YOU FAILED
 
@@ -1126,16 +1160,6 @@ product evolves in line with customer needs.”
 - Role
 - Impact
 
-### TECHNO-MANGERIAL ROLES
-
-#### Questions
-
-    - Can you discuss your experience with cloud platforms?
-    - What is your familiarity with MLOps?
-    - Have you encountered any data challenges in your previous work?
-    - How did you deploy the solution?
-    - Which algorithm did you use and why?
-    - Can you explain the basics of machine learning and decision trees?
 
 # 4. Understanding the Domain - Audit and Assurance
 
@@ -1612,7 +1636,7 @@ results actually mean something and aren’t just random luck.
 
 ---
 
-### 🛠️ Key Principles in Simple Words
+#### 🛠️ Key Principles in Simple Words
 
 1. **Control group vs. Test group**
 
@@ -1648,7 +1672,7 @@ results actually mean something and aren’t just random luck.
 
 ---
 
-### 🍰 Example for a 10-year-old
+#### 🍰 Example for a 10-year-old
 
 Imagine you want to know if **playing music while studying helps you get better grades**:
 
