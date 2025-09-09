@@ -158,6 +158,45 @@ hypothesis testing.
 **Q9. What’s the difference between permutation and combination?**  
 👉 Permutation = order matters (arranging audit reports). Combination = order doesn’t matter (choosing 5 invoices from
 100).
+Perfect 👍 Let’s make it **interview-ready** with both formulas and small calculations:
+
+---
+
+ **Permutation (nPr)**
+
+Formula:
+
+$$
+^nP_r = \frac{n!}{(n-r)!}
+$$
+
+* Example: You have **10 audit files**, and you want to know how many ways you can **arrange 3 of them** on your desk.
+
+$$
+^{10}P_3 = \frac{10!}{(10-3)!} = \frac{10 \times 9 \times 8 \times 7!}{7!} = 720
+$$
+
+✅ There are **720 possible arrangements** (because order matters).
+
+---
+
+**Combination (nCr)**
+
+Formula:
+
+$$
+^nC_r = \frac{n!}{r!(n-r)!}
+$$
+
+* Example: You have **10 invoices**, and you want to **select 3 for audit sampling**.
+
+$$
+^{10}C_3 = \frac{10!}{3!(10-3)!} = \frac{10 \times 9 \times 8}{3 \times 2 \times 1} = 120
+$$
+
+✅ There are **120 possible groups** (because order doesn’t matter).
+
+---
 
 **Q10. What’s overfitting in probability terms?**  
 👉 When a model learns noise as if it’s signal. In audit, that’s like concluding fraud just because of random
