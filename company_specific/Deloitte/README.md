@@ -222,8 +222,9 @@ anomalies are real.
 👉 It’s a way to test ideas with data. Example: “Is expense reporting fraud more likely in Q4?”
 
 **Q5. What’s the difference between Type I and Type II error?**  
-👉 Type I = false alarm (flagging normal transaction as fraud).
-Type II = missed alarm (ignoring fraud). In audit, Type II is riskier.
+👉 Type I = false alarm (flagging normal transaction as fraud). Type II = missed alarm (ignoring fraud). In audit, Type II is riskier.  
+Type I = “Alarm rings but no fire” 🔔🔥 (false positive)  
+Type II = “No alarm but there is fire” 😶🔥 (false negative)  
 
 **Q6. Explain confidence interval in simple terms.**  
 👉 It’s like saying, “I’m 95% sure company profit is between £5M–£7M.”
