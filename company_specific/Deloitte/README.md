@@ -145,7 +145,7 @@ estimate financial risk.
 
 **Q6. What’s the difference between variance and standard deviation?**  
 👉 Variance = how spread out numbers are. Standard deviation = square root of variance (easier to understand scale). In
-audit, used to measure risk spread.
+audit, used to measure risk spread. s² = ∑(x - x̄)² / (n - 1) and s = √s².
 
 **Q7. What’s the Law of Large Numbers?**  
 👉 The more samples you take, the closer the average gets to the truth. In audit, sampling 1,000 invoices gives better
