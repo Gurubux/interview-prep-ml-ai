@@ -2,3 +2,15 @@
 *.csv
 *.xlsx
 *.xls
+astro
+.git
+.env
+airflow_settings.yaml
+logs/
+.venv
+airflow.db
+airflow.cfg
+.dockerignore
+*.yaml
+Dockerfile
+*.yml
