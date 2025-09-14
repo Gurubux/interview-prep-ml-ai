@@ -1,4 +1,7 @@
 # Apache Airflow  
+
+![Airflow Dashboard demo](media/Airflow_dashboard.gif)
+
 Apache Airflow  
 Apache Airflow is a platform created by the community to programmatically author, schedule and monitor workflows.
 
