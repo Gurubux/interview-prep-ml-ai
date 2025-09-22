@@ -358,31 +358,27 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-  subgraph Dev["You (Developer)"]
-    A[Define Tool<br/>e.g., YFinanceStockTool]
-    B[Define Agent<br/>role • goal • backstory • llm • memory • tools]
-    C[Define Task<br/>description • expected_output • agent]
-    D[Assemble Crew<br/>agents[] • tasks[] • process=Sequential]
+  subgraph Dev
+    A[Define Tool: YFinanceStockTool]
+    B[Define Agent: role, goal, backstory, llm, memory, tools]
+    C[Define Task: description, expected_output, agent]
+    D[Assemble Crew: agents, tasks, process Sequential]
   end
 
-  subgraph Runtime["Execution"]
-    U[User Input / App Trigger]
-    R[Agent Reasoning<br/>LLM + Memory]
-    T[Tool Calls<br/>BaseTool.run()]
-    O[Observations<br/>Data from tools]
-    P[Task Completion<br/>expected_output]
-    F[Final Output<br/>returned to app/user]
+  subgraph Runtime
+    U[User input or app trigger]
+    R[Agent reasoning using LLM and memory]
+    T[Tool calls via BaseTool.run]
+    O[Observations returned from tools]
+    P[Task completion producing expected_output]
+    F[Final output to app or user]
   end
 
-  A --> B
-  B --> C
-  C --> D
-  U --> R
-  R -->|uses tools[]| T
-  T --> O --> R
+  A --> B --> C --> D
+  D -. start crew .-> U
+  U --> R --> T --> O --> R
   R --> P --> F
 
-  D -. start crew .-> U
 ```
 
 ---
