@@ -325,7 +325,63 @@ flowchart TD
     style O fill:#c8e6c9
     style S fill:#fff3e0
 ```
+```mermaid
+flowchart TD
+    %% ========= LAYERS =========
+    A[User in Streamlit UI\n`streamlit run financial_analyst.py`]
+    B[Streamlit App Controller\n(financial_analyst.py)]
+    C{Crew Init}
+    D[Task #1\n"Analyze AAPL"]
+    E[Agent: Wall Street Financial Analyst]
+    F[[Tool: stock_data_tool\n(get latest price, 52w high/low,\nvolume, PE, market cap, summary)]]
+    G{Tool response OK?}
+    G1[Adjust action format\nper tool schema\n(Thought → Action → Action Input → Observation)]
+    H[Intermediate Output:\nStructured AAPL analysis]
+    I[Task #2\n"Write Investment Report"]
+    J[Agent: Financial Report Specialist]
+    K[Draft Report in Markdown\n(Exec Summary, Metrics Table,\nTechnical, Risks, Outlook)]
+    L[Final Output → Streamlit UI\n(Local URL :8502)]
+    
+    %% ========= FLOW =========
+    A --> B --> C
+    C -->|Create Crew & Plan| D
+    D -->|assign| E
+    E -->|requests market data| F
+    F --> G
+    G -- Yes --> H
+    G -- No: error / repeated input / schema mismatch --> G1 --> F
 
+    H --> I
+    I -->|assign| J
+    J -->|transform analysis → report| K
+    K --> L
+
+    %% ========= DETAILS / ANNOTATIONS =========
+    subgraph Crew["Crew: crew (ID: 651401dd-...07ab)"]
+      direction TB
+      D
+      I
+    end
+
+    subgraph Agent_1["Agent 1: Wall Street Financial Analyst"]
+      direction TB
+      E --> F --> G
+    end
+
+    subgraph Agent_2["Agent 2: Financial Report Specialist"]
+      direction TB
+      J --> K
+    end
+
+    %% ========= DATA ARTIFACTS =========
+    H:::artifact
+    K:::artifact
+
+    %% ========= STYLES =========
+    classDef artifact fill:#eef7ff,stroke:#5aa0ff,stroke-width:1.2px,color:#0b3a64
+    classDef tool fill:#fff8e6,stroke:#f2b705,stroke-width:1.2px,color:#5a4100
+    class F tool
+```
 ## 📊 Data Points Collected
 
 The financial tool collects comprehensive market data including:
