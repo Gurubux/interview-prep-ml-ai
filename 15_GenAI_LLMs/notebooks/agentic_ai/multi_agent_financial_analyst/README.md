@@ -353,6 +353,120 @@ flowchart TD
   I -->|assign| J
   J --> K --> L
 ```
+
+### 1) Block diagram — “How a CrewAI Agentic Tool runs”
+
+```mermaid
+flowchart LR
+  subgraph Dev["You (Developer)"]
+    A[Define Tool<br/>e.g., YFinanceStockTool]
+    B[Define Agent<br/>role • goal • backstory • llm • memory • tools]
+    C[Define Task<br/>description • expected_output • agent]
+    D[Assemble Crew<br/>agents[] • tasks[] • process=Sequential]
+  end
+
+  subgraph Runtime["Execution"]
+    U[User Input / App Trigger]
+    R[Agent Reasoning<br/>LLM + Memory]
+    T[Tool Calls<br/>BaseTool.run()]
+    O[Observations<br/>Data from tools]
+    P[Task Completion<br/>expected_output]
+    F[Final Output<br/>returned to app/user]
+  end
+
+  A --> B
+  B --> C
+  C --> D
+  U --> R
+  R -->|uses tools[]| T
+  T --> O --> R
+  R --> P --> F
+
+  D -. start crew .-> U
+```
+
+---
+
+### 2) Class map — key objects and relationships
+
+```mermaid
+classDiagram
+  class Crew {
+    +agents: List~Agent~
+    +tasks: List~Task~
+    +process: Process
+  }
+
+  class Process {
+    <<enum>>
+    SEQUENTIAL
+    PARALLEL
+  }
+
+  class Task {
+    +description: str
+    +expected_output: str
+    +agent: Agent
+  }
+
+  class Agent {
+    +role: str
+    +goal: str
+    +backstory: str
+    +llm: LLM
+    +memory: Any
+    +tools: List~BaseTool~
+  }
+
+  class LLM {
+    +model: str
+    +params: dict
+  }
+
+  class BaseTool {
+    <<abstract>>
+    +name: str
+    +description: str
+    +args_schema: type
+    +run(**kwargs) Any
+  }
+
+  class YFinanceStockTool {
+    +name: str
+    +description: str
+    +args_schema: StockInput
+    +run(symbol: str) -> dict
+  }
+
+  class StockInput {
+    +symbol: str
+  }
+
+  Crew "1" o-- "many" Agent : manages
+  Crew "1" o-- "many" Task : schedules
+  Task "1" --> "1" Agent : executed_by
+  Agent "1" --> "1" LLM : uses
+  Agent "1" o-- "many" BaseTool : can_call
+  YFinanceStockTool --|> BaseTool : extends
+  YFinanceStockTool --> StockInput : validates
+```
+
+---
+
+### 3) Simple explanation (no jargon)
+
+1. **Make a tool**: Wrap any external action (like fetching stock data) in a small class that inherits `BaseTool`. Give it a **name**, a short **description**, an **args schema** (e.g., `StockInput` with `symbol`), and a `run()` method that returns results.
+
+2. **Make an agent**: Describe what the agent is and wants (its **role**, **goal**, **backstory**). Attach an **LLM** (model + parameters), optional **memory**, and a list of **tools** it’s allowed to call (like your stock tool).
+
+3. **Make a task**: Write a clear **description** of the work, define the **expected\_output**, and assign the **agent** that should do it.
+
+4. **Make a crew**: Put your **agents** and **tasks** into a **Crew**, and choose a **process** (usually `Sequential` so tasks run in order).
+
+5. **Run it**: When you start the crew, each task is handed to its agent. The agent **reasons with the LLM**, **calls tools** when needed, reads back **observations**, and iterates until it produces the **expected output**. The crew collects results and returns a **final output** to your app or user.
+
+That’s it: **Tools do actions**, **Agents decide and call tools**, **Tasks define goals**, and the **Crew orchestrates the flow**.
+
 ## 📊 Data Points Collected
 
 The financial tool collects comprehensive market data including:
