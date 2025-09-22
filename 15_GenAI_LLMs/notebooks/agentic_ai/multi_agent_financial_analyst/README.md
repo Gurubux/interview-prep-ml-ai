@@ -133,70 +133,70 @@ It's like having a team of smart assistants that can work independently but also
 
 ```mermaid
 flowchart TD
-    A[User Clicks 'Analyze Stock'] --> B[create_agents_and_tasks(symbol)]
+    A["User Clicks 'Analyze Stock'"] --> B["create_agents_and_tasks(symbol)"]
     
-    B --> C[Initialize LLM]
-    C --> D[Load SambaNova LLM<br/>Model: Llama-4-Maverick-17B<br/>Temperature: 0.3]
+    B --> C["Initialize LLM"]
+    C --> D["Load SambaNova LLM<br/>Model: Llama-4-Maverick-17B<br/>Temperature: 0.3"]
     
-    B --> E[Initialize Tools]
-    E --> F[Create YFinanceStockTool<br/>- Yahoo Finance API<br/>- Real-time data fetching]
+    B --> E["Initialize Tools"]
+    E --> F["Create YFinanceStockTool<br/>- Yahoo Finance API<br/>- Real-time data fetching"]
     
-    B --> G[Create Stock Analysis Agent]
-    G --> H[Agent Configuration:<br/>- Role: Wall Street Financial Analyst<br/>- Goal: Comprehensive analysis<br/>- Backstory: 15+ years experience<br/>- Tools: [stock_tool]<br/>- Memory: True<br/>- Verbose: True]
+    B --> G["Create Stock Analysis Agent"]
+    G --> H["Agent Configuration:<br/>- Role: Wall Street Financial Analyst<br/>- Goal: Comprehensive analysis<br/>- Backstory: 15+ years experience<br/>- Tools: [stock_tool]<br/>- Memory: True<br/>- Verbose: True"]
     
-    B --> I[Create Report Writing Agent]
-    I --> J[Agent Configuration:<br/>- Role: Financial Report Specialist<br/>- Goal: Professional report generation<br/>- Backstory: Institutional-grade writer<br/>- Tools: None (uses analysis output)<br/>- Memory: False<br/>- Verbose: True]
+    B --> I["Create Report Writing Agent"]
+    I --> J["Agent Configuration:<br/>- Role: Financial Report Specialist<br/>- Goal: Professional report generation<br/>- Backstory: Institutional-grade writer<br/>- Tools: None (uses analysis output)<br/>- Memory: False<br/>- Verbose: True"]
     
-    B --> K[Create Analysis Task]
-    K --> L[Task Configuration:<br/>- Description: Detailed analysis requirements<br/>- Expected Output: Comprehensive report<br/>- Agent: stock_analysis_agent<br/>- Priority: Latest trading data first]
+    B --> K["Create Analysis Task"]
+    K --> L["Task Configuration:<br/>- Description: Detailed analysis requirements<br/>- Expected Output: Comprehensive report<br/>- Agent: stock_analysis_agent<br/>- Priority: Latest trading data first"]
     
-    B --> M[Create Report Task]
-    M --> N[Task Configuration:<br/>- Description: Professional formatting<br/>- Expected Output: Markdown report<br/>- Agent: report_writer_agent<br/>- Dependencies: Analysis task output]
+    B --> M["Create Report Task"]
+    M --> N["Task Configuration:<br/>- Description: Professional formatting<br/>- Expected Output: Markdown report<br/>- Agent: report_writer_agent<br/>- Dependencies: Analysis task output"]
     
-    B --> O[Create Crew]
-    O --> P[Crew Configuration:<br/>- Agents: [stock_analysis_agent, report_writer_agent]<br/>- Tasks: [analysis_task, report_task]<br/>- Process: Sequential<br/>- Verbose: True]
+    B --> O["Create Crew"]
+    O --> P["Crew Configuration:<br/>- Agents: [stock_analysis_agent, report_writer_agent]<br/>- Tasks: [analysis_task, report_task]<br/>- Process: Sequential<br/>- Verbose: True"]
     
-    P --> Q[Return Crew Object]
-    Q --> R[crew.kickoff()]
+    P --> Q["Return Crew Object"]
+    Q --> R["crew.kickoff()"]
     
-    R --> S[AI Decision Point 1:<br/>CrewAI Process Manager]
-    S --> T{Which agent should start?}
-    T -->|Sequential Process| U[Start with First Agent:<br/>stock_analysis_agent]
+    R --> S["AI Decision Point 1:<br/>CrewAI Process Manager"]
+    S --> T{"Which agent should start?"}
+    T -->|"Sequential Process"| U["Start with First Agent:<br/>stock_analysis_agent"]
     
-    U --> V[AI Decision Point 2:<br/>Stock Analysis Agent Reasoning]
-    V --> W[Agent analyzes task description<br/>and decides to use stock_data_tool]
+    U --> V["AI Decision Point 2:<br/>Stock Analysis Agent Reasoning"]
+    V --> W["Agent analyzes task description<br/>and decides to use stock_data_tool"]
     
-    W --> X[Tool Execution:<br/>YFinanceStockTool._run(symbol)]
-    X --> Y[Fetch Real-time Data:<br/>- Company info<br/>- 1-month history<br/>- 1-year history<br/>- Calculate metrics]
+    W --> X["Tool Execution:<br/>YFinanceStockTool._run(symbol)"]
+    X --> Y["Fetch Real-time Data:<br/>- Company info<br/>- 1-month history<br/>- 1-year history<br/>- Calculate metrics"]
     
-    Y --> Z[AI Decision Point 3:<br/>Data Analysis & Interpretation]
-    Z --> AA[Agent processes data:<br/>- Identifies key metrics<br/>- Calculates percentages<br/>- Assesses trends<br/>- Evaluates risks]
+    Y --> Z["AI Decision Point 3:<br/>Data Analysis & Interpretation"]
+    Z --> AA["Agent processes data:<br/>- Identifies key metrics<br/>- Calculates percentages<br/>- Assesses trends<br/>- Evaluates risks"]
     
-    AA --> BB[Generate Analysis Output:<br/>Structured analysis report]
-    BB --> CC[AI Decision Point 4:<br/>Task Completion Check]
-    CC --> DD{Analysis complete?}
-    DD -->|Yes| EE[Pass output to next agent]
-    DD -->|No| FF[Continue analysis]
+    AA --> BB["Generate Analysis Output:<br/>Structured analysis report"]
+    BB --> CC["AI Decision Point 4:<br/>Task Completion Check"]
+    CC --> DD{"Analysis complete?"}
+    DD -->|"Yes"| EE["Pass output to next agent"]
+    DD -->|"No"| FF["Continue analysis"]
     FF --> Z
     
-    EE --> GG[AI Decision Point 5:<br/>Report Writing Agent Activation]
-    GG --> HH[Agent receives analysis output<br/>and task description]
+    EE --> GG["AI Decision Point 5:<br/>Report Writing Agent Activation"]
+    GG --> HH["Agent receives analysis output<br/>and task description"]
     
-    HH --> II[AI Decision Point 6:<br/>Report Structure Planning]
-    II --> JJ[Agent decides report structure:<br/>- Executive Summary<br/>- Market Position<br/>- Financial Metrics<br/>- Technical Analysis<br/>- Risk Assessment<br/>- Future Outlook]
+    HH --> II["AI Decision Point 6:<br/>Report Structure Planning"]
+    II --> JJ["Agent decides report structure:<br/>- Executive Summary<br/>- Market Position<br/>- Financial Metrics<br/>- Technical Analysis<br/>- Risk Assessment<br/>- Future Outlook"]
     
-    JJ --> KK[AI Decision Point 7:<br/>Content Formatting]
-    KK --> LL[Agent formats content:<br/>- Creates tables<br/>- Adds emojis<br/>- Uses markdown<br/>- Includes timestamps]
+    JJ --> KK["AI Decision Point 7:<br/>Content Formatting"]
+    KK --> LL["Agent formats content:<br/>- Creates tables<br/>- Adds emojis<br/>- Uses markdown<br/>- Includes timestamps"]
     
-    LL --> MM[Generate Final Report:<br/>Professional markdown report]
-    MM --> NN[AI Decision Point 8:<br/>Quality Check]
-    NN --> OO{Report meets requirements?}
-    OO -->|Yes| PP[Return final output]
-    OO -->|No| QQ[Refine report]
+    LL --> MM["Generate Final Report:<br/>Professional markdown report"]
+    MM --> NN["AI Decision Point 8:<br/>Quality Check"]
+    NN --> OO{"Report meets requirements?"}
+    OO -->|"Yes"| PP["Return final output"]
+    OO -->|"No"| QQ["Refine report"]
     QQ --> KK
     
-    PP --> RR[Streamlit Display:<br/>Show report to user]
-    RR --> SS[Download Option:<br/>Export as .md file]
+    PP --> RR["Streamlit Display:<br/>Show report to user"]
+    RR --> SS["Download Option:<br/>Export as .md file"]
     
     style A fill:#e3f2fd
     style S fill:#fff3e0
