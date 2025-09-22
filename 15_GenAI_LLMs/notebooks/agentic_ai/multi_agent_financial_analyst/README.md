@@ -100,8 +100,7 @@ The financial tool collects comprehensive market data including:
 
 1. **Clone Repository & Navigate:**
    ```bash
-   git clone https://github.com/Sumanth077/awesome-ai-apps-and-agents.git
-   cd awesome-ai-apps-and-agents/multi_agent_financial_analyst
+   cd multi_agent_financial_analyst
    ```
 
 2. **Install Dependencies:**
