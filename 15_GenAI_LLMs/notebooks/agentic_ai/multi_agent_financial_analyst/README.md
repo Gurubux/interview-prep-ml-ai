@@ -2,6 +2,33 @@
 
 A powerful multi-agent system that performs comprehensive stock analysis and generates detailed financial reports using CrewAI and real-time market data.
 
+### 1) Block diagram — “How a CrewAI Agentic Tool runs”
+
+```mermaid
+flowchart LR
+  subgraph Dev
+    A[Define Tool: YFinanceStockTool]
+    B[Define Agent: role, goal, backstory, llm, memory, tools]
+    C[Define Task: description, expected_output, agent]
+    D[Assemble Crew: agents, tasks, process Sequential]
+  end
+
+  subgraph Runtime
+    U[User input or app trigger]
+    R[Agent reasoning using LLM and memory]
+    T[Tool calls via BaseTool.run]
+    O[Observations returned from tools]
+    P[Task completion producing expected_output]
+    F[Final output to app or user]
+  end
+
+  A --> B --> C --> D
+  D -. start crew .-> U
+  U --> R --> T --> O --> R
+  R --> P --> F
+
+```
+
 ## 🚀 Features
 
 - **Multi-Agent Architecture**: Two specialized AI agents working in sequence
