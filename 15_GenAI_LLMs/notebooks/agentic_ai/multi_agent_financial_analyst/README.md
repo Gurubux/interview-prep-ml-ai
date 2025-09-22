@@ -1,4 +1,4 @@
-# 🎯 Multi-Agent AI Financial Analyst
+# 🎯 Multi-Agent AI Financial Analyst (CrewAI)
 
 A powerful multi-agent system that performs comprehensive stock analysis and generates detailed financial reports using CrewAI and real-time market data.
 
@@ -462,6 +462,34 @@ classDiagram
 5. **Run it**: When you start the crew, each task is handed to its agent. The agent **reasons with the LLM**, **calls tools** when needed, reads back **observations**, and iterates until it produces the **expected output**. The crew collects results and returns a **final output** to your app or user.
 
 That’s it: **Tools do actions**, **Agents decide and call tools**, **Tasks define goals**, and the **Crew orchestrates the flow**.
+
+
+Here’s a simple GitHub-friendly Mermaid diagram for that **CrewAI run cycle** you described:
+
+```mermaid
+flowchart TD
+  A[Start Crew] --> B[Task assigned to Agent]
+  B --> C[Agent reasons with LLM]
+  C --> D{Need external data?}
+  D -- Yes --> E[Call Tool]
+  E --> F[Receive Observation]
+  F --> C
+  D -- No --> G[Produce Draft Output]
+  G --> H{Matches expected_output?}
+  H -- No --> C
+  H -- Yes --> I[Task Completed]
+  I --> J[Crew collects results]
+  J --> K[Final Output to App/User]
+```
+
+This shows:
+
+* **Crew starts** → assigns tasks.
+* **Agent reasons** → may call tools.
+* **Observations** feed back into reasoning.
+* The loop continues until the **expected output** is ready.
+* Crew then collects everything and delivers the **final result**.
+
 
 ## 📊 Data Points Collected
 
