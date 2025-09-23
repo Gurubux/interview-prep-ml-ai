@@ -62,6 +62,109 @@ graph TD
 | **Web Scraping** | Gemini | Extracts and analyzes web content | `gemini-1.5-flash` |
 | **Final Generation** | Groq | Generates comprehensive answer | `llama-3.1-8b-instant` |
 
+## 🔧 Function Call Flow Diagram
+
+```mermaid
+graph TD
+    A[main] --> B[setup_vector_db]
+    A --> C[get_local_content]
+    A --> D[process_query]
+    
+    B --> B1[PyPDFLoader]
+    B --> B2[RecursiveCharacterTextSplitter]
+    B --> B3[HuggingFaceEmbeddings]
+    B --> B4[FAISS.from_documents]
+    
+    C --> C1[vector_db.similarity_search]
+    
+    D --> E[check_local_knowledge]
+    D --> F{can_answer_locally?}
+    
+    E --> E1[llm.invoke]
+    
+    F -->|Yes| G[get_local_content]
+    F -->|No| H[get_web_content]
+    
+    G --> G1[vector_db.similarity_search]
+    
+    H --> I[setup_web_scraping_agent]
+    I --> I1[SerperDevTool]
+    I --> I2[ScrapeWebsiteTool]
+    I --> I3[Agent: web_search_agent]
+    I --> I4[Agent: web_scraper_agent]
+    I --> I5[Task: search_task]
+    I --> I6[Task: scraping_task]
+    I --> I7[Crew]
+    
+    H --> H1[crew.kickoff]
+    
+    G --> J[generate_final_answer]
+    H1 --> J
+    
+    J --> J1[llm.invoke]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#e3f2fd
+    style D fill:#f3e5f5
+    style E fill:#fff3e0
+    style F fill:#ffebee
+    style G fill:#e3f2fd
+    style H fill:#fce4ec
+    style I fill:#f3e5f5
+    style J fill:#fff3e0
+```
+
+### Function Call Hierarchy
+
+```
+main()
+├── setup_vector_db(pdf_path)
+│   ├── PyPDFLoader(pdf_path)
+│   ├── RecursiveCharacterTextSplitter()
+│   ├── HuggingFaceEmbeddings()
+│   └── FAISS.from_documents()
+│
+├── get_local_content(vector_db, "")
+│   └── vector_db.similarity_search()
+│
+└── process_query(query, vector_db, local_context)
+    ├── check_local_knowledge(query, local_context)
+    │   └── llm.invoke(formatted_prompt)
+    │
+    ├── [IF can_answer_locally]
+    │   └── get_local_content(vector_db, query)
+    │       └── vector_db.similarity_search()
+    │
+    ├── [ELSE]
+    │   └── get_web_content(query)
+    │       └── setup_web_scraping_agent()
+    │           ├── SerperDevTool()
+    │           ├── ScrapeWebsiteTool()
+    │           ├── Agent(web_search_agent)
+    │           ├── Agent(web_scraper_agent)
+    │           ├── Task(search_task)
+    │           ├── Task(scraping_task)
+    │           ├── Crew()
+    │           └── crew.kickoff()
+    │
+    └── generate_final_answer(context, query)
+        └── llm.invoke(messages)
+```
+
+### Key Function Descriptions
+
+| Function | Purpose | Parameters | Returns |
+|----------|---------|------------|---------|
+| `main()` | Entry point, orchestrates the entire process | None | None |
+| `setup_vector_db()` | Creates FAISS vector database from PDF | `pdf_path` | `vector_db` |
+| `get_local_content()` | Retrieves relevant chunks from vector DB | `vector_db`, `query` | `str` (context) |
+| `process_query()` | Main processing logic with routing | `query`, `vector_db`, `local_context` | `str` (answer) |
+| `check_local_knowledge()` | Determines if local knowledge is sufficient | `query`, `context` | `bool` |
+| `get_web_content()` | Orchestrates web scraping via CrewAI | `query` | `str` (web content) |
+| `setup_web_scraping_agent()` | Creates CrewAI agents and tasks | None | `Crew` object |
+| `generate_final_answer()` | Generates final response using LLM | `context`, `query` | `str` (answer) |
+
 ## 📋 Features
 
 - **Intelligent Routing**: Determines whether to use local knowledge or web scraping
