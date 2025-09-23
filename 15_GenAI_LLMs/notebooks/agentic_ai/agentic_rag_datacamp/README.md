@@ -21,6 +21,47 @@ The system consists of four main components:
 3. **Generation System**: LLM integration with prompt optimization
 4. **Orchestration Layer**: Workflow management and error handling
 
+## 🔄 System Flow Diagram
+
+```mermaid
+graph TD
+    A[User Query] --> B[Process Query Function]
+    B --> C[Check Local Knowledge<br/>🔹 Groq LLM<br/>llama-3.1-8b-instant]
+    
+    C --> D{Can Answer<br/>Locally?}
+    
+    D -->|Yes| E[Get Local Content<br/>📚 Vector DB Search<br/>FAISS + Embeddings]
+    D -->|No| F[Setup Web Scraping Agent<br/>🌐 CrewAI Agents]
+    
+    E --> G[Generate Final Answer<br/>🔹 Groq LLM<br/>llama-3.1-8b-instant]
+    
+    F --> H[Web Search Agent<br/>🔸 Gemini LLM<br/>gemini-1.5-flash]
+    H --> I[Web Scraper Agent<br/>🔸 Gemini LLM<br/>gemini-1.5-flash]
+    I --> J[Get Web Content<br/>🌍 Serper API + Scraping]
+    J --> G
+    
+    G --> K[Final Response<br/>📝 To User]
+    
+    style A fill:#e1f5fe
+    style K fill:#e8f5e8
+    style C fill:#fff3e0
+    style G fill:#fff3e0
+    style H fill:#f3e5f5
+    style I fill:#f3e5f5
+    style E fill:#e3f2fd
+    style F fill:#fce4ec
+```
+
+### LLM Usage Breakdown
+
+| Step | LLM Used | Purpose | Model |
+|------|----------|---------|-------|
+| **Routing Decision** | Groq | Determines if local knowledge is sufficient | `llama-3.1-8b-instant` |
+| **Local Retrieval** | Embeddings | Semantic search in vector database | `sentence-transformers/all-mpnet-base-v2` |
+| **Web Search** | Gemini | Identifies relevant web sources | `gemini-1.5-flash` |
+| **Web Scraping** | Gemini | Extracts and analyzes web content | `gemini-1.5-flash` |
+| **Final Generation** | Groq | Generates comprehensive answer | `llama-3.1-8b-instant` |
+
 ## 📋 Features
 
 - **Intelligent Routing**: Determines whether to use local knowledge or web scraping
