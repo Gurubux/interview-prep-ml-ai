@@ -98,6 +98,9 @@ Each topic will include **theory notes**, **Jupyter notebooks**, and/or **Stream
 
 ---
 
+### Miscellaneous Docs/LinkedIn Posts/Learnings 
+- [𝟐𝟎 𝐜𝐨𝐫𝐞 𝐚𝐥𝐠𝐨𝐫𝐢𝐭𝐡𝐦𝐬 ](https://www.linkedin.com/posts/shreekant-mandvikar_machinelearning-aiengineering-aiagents-activity-7379832613529612288-jaIW)
+
 ## 🚀 Usage Plan  
 
 - Each link (`[#]`) will be replaced with a **Jupyter notebook, Streamlit demo, or theory note**.  
