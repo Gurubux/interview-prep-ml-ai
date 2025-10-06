@@ -17,7 +17,7 @@ https://www.linkedin.com/posts/bhavishya-pandit_vectorembeddings-machinelearning
 <img width="800" height="1131" alt="image" src="https://github.com/user-attachments/assets/fb1f6157-18a7-46f4-83f0-ce2714effc00" />
 
 ## Retrieval 
-[𝐌𝐔𝐕𝐄𝐑𝐀](https://www.linkedin.com/posts/shreekant-mandvikar_vectordatabases-rag-aiagents-activity-7379108659563483136-aFqF) 
+[𝐌𝐔𝐕𝐄𝐑𝐀](https://www.linkedin.com/posts/shreekant-mandvikar_vectordatabases-rag-aiagents-activity-7379108659563483136-aFqF)   
 <img width="800" height="1000" alt="image" src="https://github.com/user-attachments/assets/c8d1cf69-c011-464b-9c95-ecf543bfc9bc" />
 
 ## Chunking techniques
