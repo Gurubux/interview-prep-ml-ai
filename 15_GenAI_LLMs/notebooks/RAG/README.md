@@ -1,5 +1,8 @@
 # RAG (Retrieval-Augmented Generation)
 
+## RAG architectures
+[7 of the most popular RAG architectures](https://www.linkedin.com/posts/rohan-mathews-thomas_everyone-talks-about-rag-like-its-one-thing-activity-7375818197834321920-qHdE)  
+
 ## RAG from Scratch
 https://youtube.com/playlist?list=PLfaIDFEXuae2LXbO1_PKyVJiQ23ZztA0x&feature=shared  
 https://github.com/langchain-ai/rag-from-scratch
