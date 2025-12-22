@@ -8,7 +8,7 @@ Each subtopic will include **notes**, **Jupyter notebooks**, and/or **demos** (S
 ## 📂 Index
 
 ### 1. Python Core
-- [pandas, numpy](#)  
+- [pandas, numpy](https://github.com/Gurubux/interview-prep-ml-ai/tree/main/01_Coding/01_01_python_core)  
 - [typing, logging & argparse](#)  
 - [pytest (unit & property-based testing)](#)  
 - [asyncio vs concurrent.futures](#)  
