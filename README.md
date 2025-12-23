@@ -4,11 +4,22 @@ This repository contains my structured preparation for interviews as a **Lead Da
 
 Each section contains **theory notes (README.md)**, **Jupyter notebooks**, and **demos (Streamlit where possible)**.  
 
+---
+
+## 🚀 **[👉 VIEW MY COMPLETE GITHUB PORTFOLIO](./Portfolio_Projects/PORTFOLIO.md)** ⭐
+
+**Featured Expertise**: GenAI, LLMs, RAG Systems, MLOps, Cloud Technologies  
+**15+ Repositories** | **40+ Projects** | **10+ Certifications** | **Production Experience**
+
+---
+
 📑 My detailed preparation plan is available here: [Google Sheet Plan Guide](https://docs.google.com/spreadsheets/d/1TdGqA2QfkTr8HyQlPvBa7yCKXL2ZEALPlrjp7q10Ygc/edit?gid=0#gid=0)  
 
 ---
 
 ## 📂 Index  
+
+**🎯 [Portfolio Projects](https://github.com/Gurubux/interview-prep-ml-ai/tree/main/Portfolio_Projects)** ⭐ **[Complete Portfolio View](./Portfolio_Projects/PORTFOLIO.md)**
 
 1. [Coding](https://github.com/Gurubux/interview-prep-ml-ai/tree/main/01_Coding)  
 2. [Database Management](https://github.com/Gurubux/interview-prep-ml-ai/tree/main/02_Database_Management)  
